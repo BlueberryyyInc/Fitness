@@ -13,6 +13,8 @@ use Cake\ORM\Entity;
  * @property string $user_email
  * @property string|null $user_phone
  * @property string|null $user_emp_role
+ * @property int $nonce
+ * @property \Cake\I18n\FrozenTime $nonce_expiry
  */
 class User extends Entity
 {
@@ -30,5 +32,7 @@ class User extends Entity
         'user_email' => true,
         'user_phone' => true,
         'user_emp_role' => true,
+        'nonce' => true,
+        'nonce_expiry' => true,
     ];
 }

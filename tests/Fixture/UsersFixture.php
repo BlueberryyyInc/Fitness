@@ -24,6 +24,8 @@ class UsersFixture extends TestFixture
                 'user_email' => 'Lorem ipsum dolor sit amet',
                 'user_phone' => 'Lorem ip',
                 'user_emp_role' => 'Lorem ipsum dolor sit amet',
+                'nonce' => 1,
+                'nonce_expiry' => '2023-09-04 09:34:02',
             ],
         ];
         parent::init();
