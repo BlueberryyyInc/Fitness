@@ -29,7 +29,6 @@
         <?= $this->fetch('css') ?>
         <?= $this->fetch('script') ?>
     </head>
-    
 <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
