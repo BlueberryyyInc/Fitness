@@ -72,6 +72,16 @@ class UsersTable extends Table
             ->maxLength('user_emp_role', 64)
             ->allowEmptyString('user_emp_role');
 
+        $validator
+            ->integer('nonce')
+            ->requirePresence('nonce', 'create')
+            ->notEmptyString('nonce');
+
+        $validator
+            ->dateTime('nonce_expiry')
+            ->requirePresence('nonce_expiry', 'create')
+            ->notEmptyDateTime('nonce_expiry');
+
         return $validator;
     }
 }
