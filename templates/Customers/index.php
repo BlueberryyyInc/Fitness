@@ -215,7 +215,7 @@
                                 <h4>Our Vision</h4>
                                 <h4 class="subheading">Discover Our Fitness Mission</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">At Superior Fitness, we believe that everyone deserves access to top-quality gym equipment and unparalleled services. Our vision is to empower individuals, whether you're a dedicated fitness enthusiast, a commercial gym owner, or someone just starting on your fitness journey, to live your healthiest life. We're here to support your every step, lift, and sprint towards a better you</p></div>
+                            <div class="timeline-body"><p class="text-muted">At Superior Fitness, we believe that everyone deserves access to top-quality gym equipment and unparalleled services. Our vision is to empower individuals, whether you're a dedicated fitness enthusiast, a commercial gym owner, or someone just starting on your fitness journey, to live your healthiest life. We're here to support your every step, lift, and sprint towards a better you.</p></div>
                         </div>
                     </li>
                     <li class="timeline-inverted">
