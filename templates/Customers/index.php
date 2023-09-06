@@ -43,7 +43,7 @@
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <!--TODO rename our href sections to match our project pages-->
                         <li class="nav-item"><a class="nav-link" href="#services">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="BuyProducts">Products</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
@@ -60,7 +60,7 @@
                 <div class="masthead-subheading">Superior Fitness!</div>
                 <div class="masthead-heading text-uppercase">Empowerment, Strength, Potential</div>
                 <!--changed href to send to portfolio which will be our products display-->
-                <a class="btn btn-primary btn-xl text-uppercase" href="#portfolio">Shop Now</a>
+                <a class="btn btn-primary btn-xl text-uppercase" href="BuyProducts">Shop Now</a>
             </div>
         </header>
         <!-- Services-->
