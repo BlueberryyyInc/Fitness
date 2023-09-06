@@ -43,7 +43,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <!--TODO rename our href sections to match our project pages-->
-                        <li class="nav-item"><a class="nav-link" href="#services">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Customers">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="BuyProducts">Products</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
