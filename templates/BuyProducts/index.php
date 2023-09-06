@@ -85,8 +85,8 @@
                                 <img class="img-fluid" src="assets/img/portfolio/10kgdumbbells.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Explore</div>
-                                <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
+                                <div class="portfolio-caption-heading">10kg Dumbbell</div>
+                                <div class="portfolio-caption-subheading text-muted">$30</div>
                             </div>
                         </div>
                     </div>
@@ -100,8 +100,8 @@
                                 <img class="img-fluid" src="assets/img/portfolio/creatine.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Finish</div>
-                                <div class="portfolio-caption-subheading text-muted">Identity</div>
+                                <div class="portfolio-caption-heading">Creatine</div>
+                                <div class="portfolio-caption-subheading text-muted">$30</div>
                             </div>
                         </div>
                     </div>
@@ -112,11 +112,11 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
+                                <img class="img-fluid" src="assets/img/portfolio/barbell.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Lines</div>
-                                <div class="portfolio-caption-subheading text-muted">Branding</div>
+                                <div class="portfolio-caption-heading">Barbell (with clamps)</div>
+                                <div class="portfolio-caption-subheading text-muted">$80</div>
                             </div>
                         </div>
                     </div>
@@ -127,11 +127,11 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
+                                <img class="img-fluid" src="assets/img/portfolio/rowingmachine.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Southwest</div>
-                                <div class="portfolio-caption-subheading text-muted">Website Design</div>
+                                <div class="portfolio-caption-heading">Rowing Machine</div>
+                                <div class="portfolio-caption-subheading text-muted">$350</div>
                             </div>
                         </div>
                     </div>
@@ -142,11 +142,11 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
+                                <img class="img-fluid" src="assets/img/portfolio/treadmill.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Window</div>
-                                <div class="portfolio-caption-subheading text-muted">Photography</div>
+                                <div class="portfolio-caption-heading">Treadmill</div>
+                                <div class="portfolio-caption-subheading text-muted">$250</div>
                             </div>
                         </div>
                     </div>
@@ -290,7 +290,7 @@
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">Project Name</h2>
                                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/4.jpg" alt="..." />
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/barbell.jpg" alt="..." />
                                     <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <ul class="list-inline">
                                         <li>
@@ -325,7 +325,7 @@
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">Project Name</h2>
                                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.jpg" alt="..." />
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/rowingmachine.jpg" alt="..." />
                                     <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <ul class="list-inline">
                                         <li>
@@ -360,7 +360,7 @@
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">Project Name</h2>
                                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.jpg" alt="..." />
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/treadmill.jpg" alt="..." />
                                     <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <ul class="list-inline">
                                         <li>
