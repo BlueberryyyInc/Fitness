@@ -33,6 +33,7 @@
 <!-- Navigation-->
 
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <!-- TODO make always visible-->
     <div class="container">
         <a class="navbar-brand" href="<?= $this->Url->build('/') ?>"><img src="assets/img/Pasted_image-removebg-preview.png" alt="..."/></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
