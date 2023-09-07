@@ -258,146 +258,144 @@
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Contact Us</h2>
                 </div>
+                <br>
                 <div class="row">
-                <div id="business-img" class="col-6">
-                    <!--TODO figure out why it isn't showing up-->
-                    <img src="../../webroot/assets/img/barbell.jpg" alt="Barbell Image">
+                    <div id="business-img" class="col-4">
+                        <!--                    <img class="img-fluid" src="assets/img/barbell.jpg" alt="Barbell Image" width="200" height="200"/>-->
+                    </div>
+                    <div id="business-info" class="col-6">
+                        <div class="row">
+                            <div class="col-12"><h1>Superior Fitness</h1></div></div>
+                        <div class="row">
+                            <div class="col-1"><p>Address:</p></div>
+                            <div class="col-11"><p>100 Superior Fitness Way, Melbourne, Victoria</p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1"><p>Phone</p></div>
+                            <div class="col-11"><p>05757575</p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1"><p>Email:</p></div>
+                            <div class="col-11"><p>damien@superiorfitness.com</p></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-8"><p>Opening Hours:</p>
+                                <table class="table mt-4">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">Day</th>
+                                        <th scope="col">Opening Time</th>
+                                        <th scope="col">Closing Time</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Monday</td>
+                                        <td>9:00 AM</td>
+                                        <td>5:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tuesday</td>
+                                        <td>9:00 AM</td>
+                                        <td>5:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Wednesday</td>
+                                        <td>9:00 AM</td>
+                                        <td>5:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Thursday</td>
+                                        <td>9:00 AM</td>
+                                        <td>5:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Friday</td>
+                                        <td>9:00 AM</td>
+                                        <td>5:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Saturday</td>
+                                        <td>10:00 AM</td>
+                                        <td>3:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sunday</td>
+                                        <td>Closed</td>
+                                        <td>Closed</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div></div>
+                    </div>
                 </div>
-                <div id="business-info" class="col-6">
-                    <div class="row">
-                        <div class="col-12"><h1>Superior Fitness</h1></div></div>
-                    <div class="row">
-                        <div class="col-1"><p>Address:</p></div>
-                        <div class="col-11"><p>100 Superior Fitness Way, Melbourne, Victoria</p></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-1"><p>Phone</p></div>
-                        <div class="col-11"><p>05757575</p></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-1"><p>Email:</p></div>
-                        <div class="col-11"><p>damien@superiorfitness.com</p></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-8"><p>Opening Hours:</p>
-                            <table class="table mt-4">
-                                <thead>
-                                <tr>
-                                    <th scope="col">Day</th>
-                                    <th scope="col">Opening Time</th>
-                                    <th scope="col">Closing Time</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td scope="row">Monday</td>
-                                    <td>9:00 AM</td>
-                                    <td>5:00 PM</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">Tuesday</td>
-                                    <td>9:00 AM</td>
-                                    <td>5:00 PM</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">Wednesday</td>
-                                    <td>9:00 AM</td>
-                                    <td>5:00 PM</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">Thursday</td>
-                                    <td>9:00 AM</td>
-                                    <td>5:00 PM</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">Friday</td>
-                                    <td>9:00 AM</td>
-                                    <td>5:00 PM</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">Saturday</td>
-                                    <td>10:00 AM</td>
-                                    <td>3:00 PM</td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">Sunday</td>
-                                    <td>Closed</td>
-                                    <td>Closed</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div></div>
-                    </div>
-                </div>
+                <br>
                 <div id="enquiry">
                     <div class="text-center">
-                        <button id="enquiryButton" class="btn btn-primary">Enquiry</button>
+                        <button id="enquiryButton" class="btn btn-primary btn-xl text-uppercase">Enquiry</button>
                     </div>
 
-                <!-- The overlay background -->
-                <div class="overlay" id="overlay"></div>
+                    <!-- The overlay background -->
+                    <div class="overlay" id="overlay"></div>
 
-                <!-- The popup form -->
+                    <!-- The popup form -->
                     <!--TODO fix circle going over top of popup-->
-                <div class="popup" id="popup">
-                    <h2 class="display-2 text-center">Enquiry Form</h2>
-                    <!--TODO make this mailto include entered message from textarea-->
-                    <form id="contactForm" action="mailto:damien@superiorfitness.com" method="get" enctype="text/plain">
-                        <div class="row align-items-stretch mb-5">
-                            <div>
-                                <div class="form-group">
-                                    <label for="fname">First Name</label>
-                                    <input class="form-control" id="fname" name="fname" type="text" placeholder="Enter First Name" required />
-                                </div>
-                                <div class="form-group">
-                                    <label for="lname">Surname</label>
-                                    <input class="form-control" id="lname" name="lname" type="text" placeholder="Enter Surname" required />
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input class="form-control" id="email" name="email" type="email" placeholder="Enter Preferred Contact Email" required />
-                                </div>
-                                <div class="form-group mb-md-0">
-                                    <label for="phone">Phone</label>
-                                    <input class="form-control" id="phone" name="phone" type="tel" placeholder="Enter Phone" required />
-                                </div>
-                                <div class="form-group">
-                                    <label for="subject">Subject</label>
-                                    <input class="form-control" id="subject" name="subject" type="text" placeholder="Enter Subject" required />
-                                </div>
-                                <div class="form-group">
-                                    <label for="message">Your Message</label>
-                                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+                    <div class="popup" id="popup">
+                        <h2 class="display-2 text-center">Enquiry Form</h2>
+                        <form id="contactForm" action="mailto:damien@superiorfitness.com" method="post" enctype="text/plain">
+                            <div class="row align-items-stretch mb-5">
+                                <div>
+                                    <div class="form-group">
+                                        <label for="name">Full Name</label>
+                                        <input class="form-control" id="name" name="Name" type="text" placeholder="Enter Full Name" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input class="form-control" id="email" name="Email" type="email" placeholder="Enter Preferred Contact Email" required />
+                                    </div>
+                                    <div class="form-group mb-md-0">
+                                        <label for="phone">Phone</label>
+                                        <input class="form-control" id="phone" name="Phone" type="tel" placeholder="Enter Phone" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="subject">Subject</label>
+                                        <input class="form-control" id="subject" name="Subject" type="text" placeholder="Enter Subject" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message">Your Message</label>
+                                        <textarea class="form-control" id="message" name="Message" rows="4" placeholder="Your Message" required></textarea>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Submit Button -->
-                        <div class="text-center">
-                            <button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit" value="Send">Send Message</button>
-                        </div>
-                    </form>
+                            <!-- Submit Button -->
+                            <div class="text-center">
+                                <button class="btn btn-primary btn-xl text-uppercase" id="submit" name="submit" type="submit" value="Send">Send Message</button>
+                                <button class="btn btn-primary btn-xl text-uppercase" id="close" name="close" onclick="closePopup()">Close</button>
+                            </div>
+                        </form>
 
-                    <button onclick="closePopup()">Close</button>
+
+                    </div>
+
+                    <script>
+                        // Function to open the popup form
+                        function openPopup() {
+                            document.getElementById("overlay").style.display = "block";
+                            document.getElementById("popup").style.display = "block";
+                        }
+
+                        // Function to close the popup form
+                        function closePopup() {
+                            document.getElementById("overlay").style.display = "none";
+                            document.getElementById("popup").style.display = "none";
+                        }
+
+                        // Add a click event listener to the "Enquiry" button
+                        document.getElementById("enquiryButton").addEventListener("click", openPopup);
+                    </script>
                 </div>
-
-                <script>
-                    // Function to open the popup form
-                    function openPopup() {
-                        document.getElementById("overlay").style.display = "block";
-                        document.getElementById("popup").style.display = "block";
-                    }
-
-                    // Function to close the popup form
-                    function closePopup() {
-                        document.getElementById("overlay").style.display = "none";
-                        document.getElementById("popup").style.display = "none";
-                    }
-
-                    // Add a click event listener to the "Enquiry" button
-                    document.getElementById("enquiryButton").addEventListener("click", openPopup);
-                </script>
             </div>
-            </div>
+
         </section>
         <!-- Footer-->
         <footer class="footer py-4">
