@@ -77,7 +77,7 @@
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                            <i class="fas fa-truck fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">Home Delivery</h4>
                         <p class="text-muted">We help you set up your home gym purchases to create the home fitness environment that will allow you to reach all of your goals.</p>
@@ -85,7 +85,7 @@
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                            <i class="fas fa-building fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">Wholesale</h4>
                         <p class="text-muted">We can help you build your ideal fitness centre to support your business in providing fitness services to your clients.</p>
@@ -93,7 +93,7 @@
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                            <i class="fas fa-cogs fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">Repair</h4>
                         <p class="text-muted">While we stock quality products, repairs are sometimes necessary. As such, we provide extensive repair services for the products that we sell.</p>

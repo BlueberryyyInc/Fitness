@@ -54,6 +54,7 @@
 </nav>
 
         <!-- Portfolio Grid-->
+<!--TODO make this actually link to the DB-->
         <section class="page-section bg-light" id="portfolio">
             <div class="container">
                 <div class="text-center">
