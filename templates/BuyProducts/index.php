@@ -1,57 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <?= $this->Html->charset() ?>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-        <title>
-            <?= $this->fetch('title') ?>
-        </title>
-
-        <!-- Favicon-->
-        <?= $this->Html->meta(
-            'favicon.ico',
-            '/favicon.ico',
-            ['type' => 'icon']
-        );
-        ?>
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
-        <!-- Core theme CSS (includes Bootstrap)-->
-
-        <?= $this->Html->css('/css/styles.css') ?>
-
-        <?= $this->fetch('meta') ?>
-        <?= $this->fetch('css') ?>
-        <?= $this->fetch('script') ?>
-    </head>
-
+    
 <body id="page-top">
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <div class="container">
-        <!--TODO change navbar logo to something representing superior fitness-->
-        <a class="navbar-brand" href="<?= $this->Url->build('/') ?>"><img src="assets/img/Pasted_image-removebg-preview.png" alt="..."/></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars ms-1"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                <!--TODO rename our href sections to match our project pages-->
-                <li class="nav-item"><a class="nav-link" href="#services">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="BuyProducts">Products</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                <!--TODO make this link to admin dashboard login-->
-                <li class="nav-item"><a class="nav-link" href="#login">Login</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+
 
         <!-- Portfolio Grid-->
 <!--TODO make this actually link to the DB-->

@@ -30,28 +30,7 @@
     <?= $this->fetch('script') ?>
 </head>
 <body id="page-top">
-<!-- Navigation-->
 
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <!-- TODO make always visible-->
-    <div class="container">
-        <a class="navbar-brand" href="<?= $this->Url->build('/') ?>"><img src="assets/img/Pasted_image-removebg-preview.png" alt="..."/></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars ms-1"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                <li class="nav-item"><a class="nav-link" href="Customers">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="BuyProducts">Products</a></li>
-                <li class="nav-item"><a class="nav-link" href="About">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="Contact">Contact</a></li>
-                <!--TODO make this link to admin dashboard login-->
-                <li class="nav-item"><a class="nav-link" href="#login">Login</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
 <!-- Contact-->
 <section class="page-section" id="contact">
     <div class="container">
