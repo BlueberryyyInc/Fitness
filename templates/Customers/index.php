@@ -34,7 +34,6 @@
 
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <!--TODO change navbar logo to something representing superior fitness-->
                 <a class="navbar-brand" href="<?= $this->Url->build('/') ?>"><img src="assets/img/Pasted_image-removebg-preview.png" alt="..."/></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
@@ -42,7 +41,6 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <!--TODO rename our href sections to match our project pages-->
                         <li class="nav-item"><a class="nav-link" href="#services">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="BuyProducts">Products</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
