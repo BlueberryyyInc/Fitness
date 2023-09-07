@@ -43,8 +43,8 @@
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#services">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="BuyProducts">Products</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="About">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Contact">Contact</a></li>
                         <!--TODO make this link to admin dashboard login-->
                         <li class="nav-item"><a class="nav-link" href="#login">Login</a></li>
                     </ul>
