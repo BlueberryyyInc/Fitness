@@ -28,6 +28,7 @@
                     echo $this->Form->control('user_emp_role');
                     echo $this->Form->control('nonce');
                     echo $this->Form->control('nonce_expiry');
+                    echo $this->Form->control('password');
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>

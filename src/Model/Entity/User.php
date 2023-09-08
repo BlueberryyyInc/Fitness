@@ -15,6 +15,7 @@ use Cake\ORM\Entity;
  * @property string|null $user_emp_role
  * @property int $nonce
  * @property \Cake\I18n\FrozenTime $nonce_expiry
+ * @property string $password
  */
 class User extends Entity
 {
@@ -34,5 +35,15 @@ class User extends Entity
         'user_emp_role' => true,
         'nonce' => true,
         'nonce_expiry' => true,
+        'password' => true,
+    ];
+
+    /**
+     * Fields that are excluded from JSON versions of the entity.
+     *
+     * @var array<string>
+     */
+    protected $_hidden = [
+        'password',
     ];
 }

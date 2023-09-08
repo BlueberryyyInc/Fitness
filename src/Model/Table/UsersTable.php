@@ -82,6 +82,12 @@ class UsersTable extends Table
             ->requirePresence('nonce_expiry', 'create')
             ->notEmptyDateTime('nonce_expiry');
 
+        $validator
+            ->scalar('password')
+            ->maxLength('password', 255)
+            ->requirePresence('password', 'create')
+            ->notEmptyString('password');
+
         return $validator;
     }
 }
