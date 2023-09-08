@@ -76,18 +76,23 @@ class UsersController extends AppController
     public function login()
     {
         $user = $this->Users->newEmptyEntity();
+        $data = $this->request->getData();
         if ($this->request->is('post')) {
-            $data =$this->request->getData();
-            $user =$this->Auth->identify();
-            if($user){
-                $this->Auth->setUser($user);
-              return $this->redirect(['action'=>'index']);
+            $data = $this->request->getData();
+            $user = $this->Auth->identify();
 
-            }
-        }
+            debug($user);
+            exit;
+            /*$user = $this->Auth->identify();
+            if ($user) {
+                $this->Auth->setUser($user);
+                return $this->redirect(['action' => 'index']);
+            */}
+
         $this->set(compact('user'));
 
     }
+
 
     public function register(){
         $user = $this->Users->newEmptyEntity();
