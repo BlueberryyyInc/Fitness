@@ -7,6 +7,7 @@ use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
+use Cake\Auth\DefaultPasswordHasher;
 
 /**
  * Users Model
@@ -42,6 +43,13 @@ class UsersTable extends Table
         $this->setPrimaryKey('id');
     }
 
+    public function beforeSave(\Cake\Event\EventInterface $event, \Cake\Datasource\EntityInterface $entity, \ArrayObject $options)
+    {
+        if ($entity->isDirty('password')) {
+            $entity->set('password', (new DefaultPasswordHasher)->hash($entity->get('password')));
+        }
+        return true;
+    }
     /**
      * Default validation rules.
      *
@@ -90,4 +98,5 @@ class UsersTable extends Table
 
         return $validator;
     }
+
 }
