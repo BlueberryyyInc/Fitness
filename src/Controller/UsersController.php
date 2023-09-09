@@ -19,7 +19,7 @@ class UsersController extends AppController
     public function initialize(): void
     {
         parent::initialize();
-        $this->loadComponent('Authentication.Authentication');
+       // $this->loadComponent('Authentication.Authentication');
     }
 
     public function index()
@@ -50,7 +50,7 @@ class UsersController extends AppController
         parent::beforeFilter($event);
         // Configure the login action to not require authentication, preventing
         // the infinite redirect loop issue
-        $this->Authentication->addUnauthenticatedActions(['login', 'add']);
+        $this->Authentication->addUnauthenticatedActions(['login', 'add' , 'delete', 'edit']);
     }
 
 
@@ -73,7 +73,7 @@ class UsersController extends AppController
         }
         $this->set(compact('user'));
     }
-    public function login()
+    /*public function login()
     {
         $user = $this->Users->newEmptyEntity();
         $data = $this->request->getData();
@@ -87,14 +87,32 @@ class UsersController extends AppController
             if ($user) {
                 $this->Auth->setUser($user);
                 return $this->redirect(['action' => 'index']);
-            */}
+            */
 
-        $this->set(compact('user'));
+public function login()
+{
+    $user = $this->Users->newEmptyEntity();
+
+    if ($this->request->is('post')) {
+        $result = $this->Authentication->getResult();
+
+        // If the user is valid and not locked out or inactive
+        if ($result->isValid()) {
+            $target = $this->Authentication->getLoginRedirect() ?? '/';
+
+            return $this->redirect($target);
+        } else {
+            $this->Flash->error('Login failed. Invalid username or password.');
+        }
+    }
+
+
+    $this->set(compact('user'));
 
     }
 
 
-    public function register(){
+    /*public function register(){
         $user = $this->Users->newEmptyEntity();
         if($this ->request ->is("post")) {
             $hashing = new DefaultPasswordHasher();
@@ -120,7 +138,7 @@ class UsersController extends AppController
         $this->set(compact('user'));
 
     }
-
+*/
     /**
      * Edit method
      *

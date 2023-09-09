@@ -43,9 +43,10 @@ class AppController extends Controller
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
+        $this->loadComponent('Authentication.Authentication');
         // Add this line to check authentication result and lock your site
-        $this->loadComponent('Auth');
-        $this->Auth->allow(['login','register']);
+        //$this->loadComponent('Auth');
+        //$this->Auth->allow(['login','register']);
 
 
         /*
