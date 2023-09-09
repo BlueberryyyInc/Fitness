@@ -19,7 +19,7 @@ class UsersController extends AppController
     public function initialize(): void
     {
         parent::initialize();
-       // $this->loadComponent('Authentication.Authentication');
+        // $this->loadComponent('Authentication.Authentication');
     }
 
     public function index()
@@ -45,6 +45,12 @@ class UsersController extends AppController
         $this->set(compact('user'));
     }
 
+    /**
+     * Add method
+     *
+     * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
+     */
+
     public function beforeFilter(\Cake\Event\EventInterface $event)
     {
         parent::beforeFilter($event);
@@ -53,12 +59,6 @@ class UsersController extends AppController
         $this->Authentication->addUnauthenticatedActions(['login']);
     }
 
-
-    /**
-     * Add method
-     *
-     * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
-     */
     public function add()
     {
         $user = $this->Users->newEmptyEntity();
@@ -73,44 +73,28 @@ class UsersController extends AppController
         }
         $this->set(compact('user'));
     }
-    /*public function login()
+
+    public function login()
     {
         $user = $this->Users->newEmptyEntity();
-        $data = $this->request->getData();
+
         if ($this->request->is('post')) {
-            $data = $this->request->getData();
-            $user = $this->Auth->identify();
+            $result = $this->Authentication->getResult();
 
-            debug($user);
-            exit;
-            /*$user = $this->Auth->identify();
-            if ($user) {
-                $this->Auth->setUser($user);
-                return $this->redirect(['action' => 'index']);
-            */
+            // If the user is valid and not locked out or inactive
+            if ($result->isValid()) {
+                $target = $this->Authentication->getLoginRedirect() ?? '/';
 
-public function login()
-{
-    $user = $this->Users->newEmptyEntity();
-
-    if ($this->request->is('post')) {
-        $result = $this->Authentication->getResult();
-
-        // If the user is valid and not locked out or inactive
-        if ($result->isValid()) {
-            $target = $this->Authentication->getLoginRedirect() ?? '/';
-
-            return $this->redirect($target);
-        } else {
-            $this->Flash->error('Login failed. Invalid username or password.');
+                return $this->redirect($target);
+            } else {
+                $this->Flash->error('Login failed. Invalid username or password.');
+            }
         }
+
+
+        $this->set(compact('user'));
+
     }
-
-
-    $this->set(compact('user'));
-
-    }
-
 
     public function register(){
         $user = $this->Users->newEmptyEntity();
@@ -138,6 +122,10 @@ public function login()
         $this->set(compact('user'));
 
     }
+
+
+
+
 
     /**
      * Edit method
@@ -182,6 +170,7 @@ public function login()
 
         return $this->redirect(['action' => 'index']);
     }
+
     public function logout()
     {
         $result = $this->Authentication->getResult();
@@ -191,4 +180,6 @@ public function login()
             return $this->redirect(['controller' => 'Users', 'action' => 'login']);
         }
     }
+
+
 }

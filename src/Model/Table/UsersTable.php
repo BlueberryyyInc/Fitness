@@ -50,6 +50,8 @@ class UsersTable extends Table
         }
         return true;
     }
+
+
     /**
      * Default validation rules.
      *
@@ -98,5 +100,4 @@ class UsersTable extends Table
 
         return $validator;
     }
-
 }
