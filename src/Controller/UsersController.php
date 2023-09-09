@@ -82,8 +82,9 @@ class UsersController extends AppController
             $result = $this->Authentication->getResult();
 
             // If the user is valid and not locked out or inactive
-            if ($result->isValid()) {
-                $target = $this->Authentication->getLoginRedirect() ?? '/';
+            if ($result && $result->isValid()) {
+                $fallbackLocation = ['controller' => 'User', 'action' => 'index'];
+                $target = $this->Authentication->getLoginRedirect() ?? $fallbackLocation;
 
                 return $this->redirect($target);
             } else {

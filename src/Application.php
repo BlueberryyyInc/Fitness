@@ -15,7 +15,7 @@ declare(strict_types=1);
  * @license   https://opensource.org/licenses/mit-license.php MIT License
  */
 namespace App;
-
+use Authentication\Identifier\IdentifierInterface;
 use Cake\Core\Configure;
 use Cake\Core\ContainerInterface;
 use Cake\Datasource\FactoryLocator;
@@ -131,27 +131,34 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
     public function getAuthenticationService(ServerRequestInterface $request): AuthenticationServiceInterface
     {
         $authenticationService = new AuthenticationService([
-            'unauthenticatedRedirect' => Router::url('users/login'),
+            'unauthenticatedRedirect' => Router::url([
+                'controller' => 'Users',
+                'action' => 'login',
+                'plugin' => null,
+                'prefix' => null
+            ]),
             'queryParam' => 'redirect',
         ]);
 
+        $authentication_fields = [
+            IdentifierInterface::CREDENTIAL_USERNAME => 'user_name',
+            IdentifierInterface::CREDENTIAL_PASSWORD => 'password'
+        ];
+
         // Load identifiers, ensure we check email and password fields
-        $authenticationService->loadIdentifier('Authentication.Password', [
-            'fields' => [
-                'username' => 'user_name',
-                'password' => 'password',
-            ]
-        ]);
+        $authenticationService->loadIdentifier('Authentication.Password', ['fields' => $authentication_fields]);
 
         // Load the authenticators, you want session first
         $authenticationService->loadAuthenticator('Authentication.Session');
         // Configure form data check to pick email and password
         $authenticationService->loadAuthenticator('Authentication.Form', [
-            'fields' => [
-                'username' => 'user_name',
-                'password' => 'password',
-            ],
-            'loginUrl' => Router::url('/users/login'),
+            'fields' => $authentication_fields,
+            'loginUrl' => Router::url([
+                'controller' => 'Users',
+                'action' => 'login',
+                'plugin' => null,
+                'prefix' => null
+            ]),
         ]);
 
         return $authenticationService;
