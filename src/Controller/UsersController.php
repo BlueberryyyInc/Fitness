@@ -50,7 +50,7 @@ class UsersController extends AppController
         parent::beforeFilter($event);
         // Configure the login action to not require authentication, preventing
         // the infinite redirect loop issue
-        $this->Authentication->addUnauthenticatedActions(['login', 'add' , 'delete', 'edit']);
+        $this->Authentication->addUnauthenticatedActions(['login']);
     }
 
 
@@ -112,7 +112,7 @@ public function login()
     }
 
 
-    /*public function register(){
+    public function register(){
         $user = $this->Users->newEmptyEntity();
         if($this ->request ->is("post")) {
             $hashing = new DefaultPasswordHasher();
@@ -138,7 +138,7 @@ public function login()
         $this->set(compact('user'));
 
     }
-*/
+
     /**
      * Edit method
      *
