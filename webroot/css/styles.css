@@ -11258,14 +11258,14 @@ header.masthead .masthead-heading {
 }
 
 section#contact {
-    background-color: lightcoral;
-<!--background-image: url("../assets/img/map-image.png");-->
+    /*background-color: lightcoral;
+background-image: url("../assets/img/map-image.png");*/
     background-repeat: no-repeat;
     background-position: center;
     font-family: sans-serif;
 }
 section#contact .section-heading {
-    color: #fff;
+    color: #ea5455;
 }
 
 /* Style for the overlay background */
@@ -11302,6 +11302,13 @@ section#contact .section-heading {
     margin: auto;
     /*TODO fix button width*/
     width: 30%;
+}
+
+.business-img {
+    float: right;
+}
+.business-info {
+
 }
 
 section#contact form#contactForm .form-group {

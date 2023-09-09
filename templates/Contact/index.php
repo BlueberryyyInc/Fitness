@@ -40,7 +40,7 @@
         <br>
         <div class="row">
             <div id="business-img" class="col-4">
-                <!--                    <img class="img-fluid" src="assets/img/barbell.jpg" alt="Barbell Image" width="200" height="200"/>-->
+<!--                <img class="img-fluid" src="assets/img/barbell.jpg" alt="Barbell Image" height="300" width="300"/>-->
             </div>
             <div id="business-info" class="col-6">
                 <div class="row">
@@ -118,7 +118,6 @@
             <div class="overlay" id="overlay"></div>
 
             <!-- The popup form -->
-            <!--TODO fix circle going over top of popup-->
             <div class="popup" id="popup">
                 <h2 class="display-2 text-center">Enquiry Form</h2>
                 <form id="contactForm" action="mailto:damien@superiorfitness.com" method="post" enctype="text/plain">
