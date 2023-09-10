@@ -10839,7 +10839,7 @@ p {
 }
 
 .page-section {
-    margin-top: 130px;
+    margin-top: 30px;
     padding: 6rem 0;
 }
 .page-section h2.section-heading, .page-section .section-heading.h2 {
@@ -11255,6 +11255,10 @@ header.masthead .masthead-heading {
 
 .img-brand {
     height: 2.75rem;
+}
+
+section #services {
+    padding-top: 0;
 }
 
 section#contact {
