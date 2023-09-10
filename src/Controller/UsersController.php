@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 namespace App\Controller;
-
+use Cake\Auth\DefaultPasswordHasher;
 /**
  * Users Controller
  *
@@ -16,6 +16,12 @@ class UsersController extends AppController
      *
      * @return \Cake\Http\Response|null|void Renders view
      */
+    public function initialize(): void
+    {
+        parent::initialize();
+        // $this->loadComponent('Authentication.Authentication');
+    }
+
     public function index()
     {
         $users = $this->paginate($this->Users);
@@ -44,6 +50,15 @@ class UsersController extends AppController
      *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      */
+
+    public function beforeFilter(\Cake\Event\EventInterface $event)
+    {
+        parent::beforeFilter($event);
+        // Configure the login action to not require authentication, preventing
+        // the infinite redirect loop issue
+        $this->Authentication->addUnauthenticatedActions(['login']);
+    }
+
     public function add()
     {
         $user = $this->Users->newEmptyEntity();
@@ -58,6 +73,60 @@ class UsersController extends AppController
         }
         $this->set(compact('user'));
     }
+
+    public function login()
+    {
+        $user = $this->Users->newEmptyEntity();
+
+        if ($this->request->is('post')) {
+            $result = $this->Authentication->getResult();
+
+            // If the user is valid and not locked out or inactive
+            if ($result && $result->isValid()) {
+                $fallbackLocation = ['controller' => 'Users', 'action' => 'index'];
+                $target = $this->Authentication->getLoginRedirect() ?? $fallbackLocation;
+
+                return $this->redirect($target);
+            } else {
+                $this->Flash->error('Login failed. Invalid username or password.');
+            }
+        }
+
+
+        $this->set(compact('user'));
+
+    }
+
+    public function register(){
+        $user = $this->Users->newEmptyEntity();
+        if($this ->request ->is("post")) {
+            $hashing = new DefaultPasswordHasher();
+            $hashed_password =$hashing->hash($this->request->getData('password'));
+            $nowDate = date('Y-m-d H:i:s');
+
+            $data = array(
+                'username' => $this->request->getData('username'),
+                'password' => $hashed_password,
+                'createDate' => $nowDate,
+            );
+
+
+            $user = $this->Users->patchEntity($user, $data);
+            if ($this->Users->save($user)) {
+
+
+                $this->Flash->success(__('The user has been saved.'));
+                return $this->redirect(['action' => 'index']);
+            }
+        }
+
+        $this->set(compact('user'));
+
+    }
+
+
+
+
 
     /**
      * Edit method
@@ -102,4 +171,16 @@ class UsersController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+    public function logout()
+    {
+        $result = $this->Authentication->getResult();
+        // regardless of POST or GET, redirect if user is logged in
+        if ($result && $result->isValid()) {
+            $this->Authentication->logout();
+            return $this->redirect(['controller' => 'Users', 'action' => 'login']);
+        }
+    }
+
+
 }
