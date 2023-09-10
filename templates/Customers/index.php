@@ -16,9 +16,9 @@
                 <a class="btn btn-primary btn-xl text-uppercase" href="BuyProducts">Shop Now</a>
             </div>
         </header>
+        <!--TODO alter padding-->
         <!-- Services-->
         <section class="page-section" id="services">
-            <!--TODO change icons to something relevant to the services we offer as well as colour scheme changes - attempted-->
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Services</h2>
@@ -52,6 +52,8 @@
                 </div>
             </div>
         </section>
+
+        <!--TODO figure out why the hell theres still a footer-->
 
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
