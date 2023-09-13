@@ -5,7 +5,6 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <!--TODO alter fonts to suit fitness industry-->
                 <?= $this->Flash->render() ?>
                 <?= $this->fetch('content') ?>
                 <!-- Renamed the project and created a slogan -->
@@ -16,7 +15,6 @@
                 <a class="btn btn-primary btn-xl text-uppercase" href="BuyProducts">Shop Now</a>
             </div>
         </header>
-        <!--TODO alter padding-->
         <!-- Services-->
         <section class="page-section" id="services">
             <div class="container">
@@ -26,34 +24,39 @@
                 </div>
                 <div class="row text-center">
                     <div class="col-md-4">
+                        <!--TODO Make Pages that Make More Sense for Home Delivery and Wholesale to Click To-->
+                        <a href="Contact">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-danger"></i>
                             <i class="fas fa-truck fa-stack-1x fa-inverse"></i>
                         </span>
+                        </a>
                         <h4 class="my-3">Home Delivery</h4>
-                        <p class="text-muted">We help you set up your home gym purchases to create the home fitness environment that will allow you to reach all of your goals.</p>
+                        <p class="text-muted services-paragraph">We help you set up your home gym purchases to create the home fitness environment that will allow you to reach all of your goals.</p>
                     </div>
                     <div class="col-md-4">
+                        <a href="Contact">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-danger"></i>
                             <i class="fas fa-building fa-stack-1x fa-inverse"></i>
                         </span>
+                        </a>
                         <h4 class="my-3">Wholesale</h4>
-                        <p class="text-muted">We can help you build your ideal fitness centre to support your business in providing fitness services to your clients.</p>
+                        <p class="text-muted services-paragraph">We can help you build your ideal fitness centre to support your business in providing fitness services to your clients.</p>
                     </div>
                     <div class="col-md-4">
+                        <a href="Repair">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-danger"></i>
                             <i class="fas fa-cogs fa-stack-1x fa-inverse"></i>
                         </span>
+                        </a>
                         <h4 class="my-3">Repair</h4>
-                        <p class="text-muted">While we stock quality products, repairs are sometimes necessary. As such, we provide extensive repair services for the products that we sell.</p>
+                        <p class="text-muted services-paragraph">While we stock quality products, repairs are sometimes necessary. As such, we provide extensive repair services for the products that we sell.</p>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!--TODO figure out why the hell theres still a footer-->
 
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>

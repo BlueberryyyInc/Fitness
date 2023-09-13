@@ -10843,14 +10843,13 @@ p {
     padding: 6rem 0;
 }
 .page-section h2.section-heading, .page-section .section-heading.h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-top: 0;
     margin-bottom: 1rem;
 }
 .page-section h3.section-subheading, .page-section .section-subheading.h3 {
-    font-size: 1rem;
+    font-size: 1.75rem;
     font-weight: 400;
-    font-style: italic;
     font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     margin-bottom: 4rem;
 }
@@ -10897,11 +10896,11 @@ p {
     text-transform: uppercase;
 }
 #mainNav .navbar-brand img {
-    height: 1.5rem;
+    height: 2rem;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 0.95rem;
+    font-size: 1.5rem;
     color: #fff;
     letter-spacing: 0.0625em;
 }
@@ -10918,7 +10917,7 @@ p {
         transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
     }
     #mainNav .navbar-brand {
-        font-size: 1.5em;
+        font-size: 1.75em;
         transition: font-size 0.3s ease-in-out;
     }
     #mainNav .navbar-brand img {
@@ -10931,11 +10930,11 @@ p {
         background-color: #212529;
     }
     #mainNav.navbar-shrink .navbar-brand {
-        font-size: 1.25em;
+        font-size: 1.75rem;
     }
     #mainNav.navbar-shrink .navbar-brand svg,
     #mainNav.navbar-shrink .navbar-brand img {
-        height: 1.5rem;
+        height: 2rem;
     }
     #mainNav .navbar-nav .nav-item {
         margin-right: 1rem;
@@ -10954,6 +10953,7 @@ header.masthead {
     background-attachment: scroll;
     background-position: center center;
     background-size: cover;
+    height: 100vh;
 }
 header.masthead .masthead-subheading {
     font-size: 1.5rem;
@@ -10974,6 +10974,9 @@ header.masthead .masthead-heading {
     header.masthead {
         padding-top: 17rem;
         padding-bottom: 12.5rem;
+        height: 75vh;
+        /*width: 70vw;*/
+        /*height: 100vh; make the masthead have a section height of whole view per We*/
     }
     header.masthead .masthead-subheading {
         font-size: 2.25rem;
@@ -11270,6 +11273,10 @@ background-image: url("../assets/img/map-image.png");*/
 }
 section#contact .section-heading {
     color: #ea5455;
+}
+
+.services-paragraph {
+    font-size: 2rem;
 }
 
 /* Style for the overlay background */

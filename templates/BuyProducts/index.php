@@ -9,7 +9,8 @@
     <div class="container">
         <div class="text-center">
             <h2 class="section-heading text-uppercase">Catalogue</h2>
-            <h2 class="section-subheading">For purchase enquiries, please send an email to superiorfitness@gmail.com</h2>
+            <!--For consistency, link to the contact us page with enquiry form-->
+            <h2 class="section-subheading">For purchase enquiries, you can contact us <a href="Contact">here.</a></h2>
         </div>
         <div class="row">
             <div class="col-lg-4 col-sm-6 mb-4">
