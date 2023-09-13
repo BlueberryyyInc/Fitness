@@ -20,7 +20,9 @@ class UsersController extends AppController
     {
         parent::initialize();
         // $this->loadComponent('Authentication.Authentication');
+        $this->Authentication->allowUnauthenticated(['index']);
     }
+
 
     public function index()
     {

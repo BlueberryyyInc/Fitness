@@ -34,7 +34,7 @@ class PagesController extends AppController
     public function initialize(): void {
         parent::initialize();
         // $this->loadComponent('Authentication.Authentication');
-        $this->Authentication->allowUnauthenticated(['display', 'home']);
+        $this->Authentication->allowUnauthenticated(['display', 'home','contact','products','about']);
     }
     /**
      * Displays a view

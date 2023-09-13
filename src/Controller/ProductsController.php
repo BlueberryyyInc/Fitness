@@ -11,6 +11,12 @@ namespace App\Controller;
  */
 class ProductsController extends AppController
 {
+
+    public function initialize(): void
+    {
+        parent::initialize();
+        $this->Authentication->allowUnauthenticated(['index','about','products','contact','home']);
+    }
     /**
      * Index method
      *
