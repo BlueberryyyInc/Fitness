@@ -41,8 +41,7 @@ $cakeDescription = 'Superior Fitness';
         <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
         <!-- Core theme CSS (includes Bootstrap)-->
 
-        <?= $this->Html->css('/css/styles.css') ?>
-    <?= $this->Html->css(['normalize.min', 'milligram.min', 'cake']) ?>
+    <?= $this->Html->css(['normalize.min', 'milligram.min', 'cake','styles']) ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
