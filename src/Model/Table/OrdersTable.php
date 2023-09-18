@@ -61,7 +61,7 @@ class OrdersTable extends Table
         $validator
             ->integer('cust_ID')
             ->requirePresence('cust_ID', 'create')
-            ->greaterThan('cust_ID', 0, "Please use an existing customer ID")
+            ->greaterThan('cust_ID', 0, "Customer IDs must be positive")
             ->notEmptyString('cust_ID');
 
         return $validator;
