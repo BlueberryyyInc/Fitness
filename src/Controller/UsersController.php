@@ -20,7 +20,7 @@ class UsersController extends AppController
     {
         parent::initialize();
         // $this->loadComponent('Authentication.Authentication');
-        $this->Authentication->allowUnauthenticated(['index']);
+        $this->Authentication->allowUnauthenticated(['customers','contacts','products','about']);
     }
 
 
@@ -58,7 +58,7 @@ class UsersController extends AppController
         parent::beforeFilter($event);
         // Configure the login action to not require authentication, preventing
         // the infinite redirect loop issue
-        $this->Authentication->addUnauthenticatedActions(['login']);
+        $this->Authentication->addUnauthenticatedActions(['login','products','contacts','about']);
     }
 
     public function add()
