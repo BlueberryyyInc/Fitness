@@ -27,8 +27,8 @@ $cakeDescription = 'Superior Fitness';
     </title>
     <!-- Favicon-->
     <?= $this->Html->meta(
-            'favicon.ico',
-            '/favicon.ico',
+            'favicon.png',
+            '/webroot/assets/favicon.png',
             ['type' => 'icon']
         );
     ?>
