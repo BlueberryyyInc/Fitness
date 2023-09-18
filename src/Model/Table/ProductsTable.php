@@ -7,6 +7,8 @@ use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
+use function PHPUnit\Framework\greaterThan;
+use function PHPUnit\Framework\greaterThanOrEqual;
 
 /**
  * Products Model
@@ -67,11 +69,15 @@ class ProductsTable extends Table
         $validator
             ->decimal('product_cost')
             ->requirePresence('product_cost', 'create')
+            ->lessThan('product_cost',999999, "Please enter a lower cost")
+            ->greaterThanOrEqual('product_cost',0,"Please enter a non-negative cost")
             ->notEmptyString('product_cost');
 
         $validator
             ->integer('inventory_amount')
             ->requirePresence('inventory_amount', 'create')
+            ->lessThan('inventory_amount',999999, "Please enter a smaller amount of inventory")
+            ->greaterThanOrEqual('inventory_amount',0,"Please enter a non-negative inventory amount")
             ->notEmptyString('inventory_amount');
 
         return $validator;
