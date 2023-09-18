@@ -70,7 +70,8 @@ class UsersTable extends Table
             ->scalar('user_email')
             ->maxLength('user_email', 64)
             ->requirePresence('user_email', 'create')
-            ->notEmptyString('user_email');
+            ->notEmptyString('user_email')
+            ->email('user_email',false, "Please enter a valid email");
 
         $validator
             ->scalar('user_phone')
@@ -94,7 +95,8 @@ class UsersTable extends Table
 
         $validator
             ->scalar('password')
-            ->maxLength('password', 255)
+            ->maxLength('password', 128, "Please use a shorter password")
+            ->minLength('password',3,"Please use a longer password")
             ->requirePresence('password', 'create')
             ->notEmptyString('password');
 
