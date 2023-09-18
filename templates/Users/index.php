@@ -16,9 +16,7 @@
                     <th><?= $this->Paginator->sort('user_email') ?></th>
                     <th><?= $this->Paginator->sort('user_phone') ?></th>
                     <th><?= $this->Paginator->sort('user_emp_role') ?></th>
-                    <th><?= $this->Paginator->sort('nonce') ?></th>
-                    <th><?= $this->Paginator->sort('nonce_expiry') ?></th>
-                    <th class="actions"><?= __('Actions') ?></th>
+
                 </tr>
             </thead>
             <tbody>
@@ -29,10 +27,7 @@
                     <td><?= h($user->user_email) ?></td>
                     <td><?= h($user->user_phone) ?></td>
                     <td><?= h($user->user_emp_role) ?></td>
-                    <td><?= $this->Number->format($user->nonce) ?></td>
-                    <td><?= h($user->nonce_expiry) ?></td>
                     <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $user->id]) ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id]) ?>
                         <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?>
                     </td>
