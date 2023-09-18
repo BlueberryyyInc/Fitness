@@ -26,8 +26,10 @@ class UsersController extends AppController
 
     public function index()
     {
-        $users = $this->paginate($this->Users);
+        /* $this->layout = 'admin';
+        debug($this->layout); */    //FIX: does not change layout as intended
 
+        $users = $this->paginate($this->Users);
         $this->set(compact('users'));
     }
 
