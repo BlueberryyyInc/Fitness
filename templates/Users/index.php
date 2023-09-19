@@ -30,7 +30,7 @@ echo $this->Html->script("/js/datatables-simple-demo.js",['block'=>true]);
                     <th><?= $this->Paginator->sort('user_email') ?></th>
                     <th><?= $this->Paginator->sort('user_phone') ?></th>
                     <th><?= $this->Paginator->sort('user_emp_role') ?></th>
-
+                    <th class="actions"><?= __('Actions') ?></th>
                 </tr>
             </thead>
             <tfoot>
@@ -41,8 +41,6 @@ echo $this->Html->script("/js/datatables-simple-demo.js",['block'=>true]);
                     <th><?= $this->Paginator->sort('user_email') ?></th>
                     <th><?= $this->Paginator->sort('user_phone') ?></th>
                     <th><?= $this->Paginator->sort('user_emp_role') ?></th>
-                    <th><?= $this->Paginator->sort('nonce') ?></th>
-                    <th><?= $this->Paginator->sort('nonce_expiry') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
             </tfoot>
