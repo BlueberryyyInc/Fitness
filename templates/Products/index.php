@@ -17,7 +17,7 @@ echo $this->Html->script("/js/datatables-simple-demo.js",['block'=>true]);
         <div class="d-sm-flex align-items-center justify-content-between mb-4" >
 	    <h3><?= __('Products') ?></h3>
 	    <a href=<?= $this->Url->build(['action' => 'add'])?> class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-        <i class="fa-solid fa-user-plus"></i> Add Product</a>
+        <i class="fa-solid fa-square-plus"></i> Add Product</a>
     </div>
 
     <div class="card mb-4">
