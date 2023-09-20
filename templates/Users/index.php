@@ -16,7 +16,7 @@ echo $this->Html->script("/js/datatables-simple-demo.js",['block'=>true]);
 <div class="users index content">
     <div class="d-sm-flex align-items-center justify-content-between mb-4" >
 	    <h1 class="h3 mb-e text-gray-80"><?= __('Users') ?></h1>
-	    <a href="<?= $this->Url->build(['action' => 'add'])?>->" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+	    <a href=<?= $this->Url->build(['action' => 'add'])?> class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
         <i class="fa-solid fa-user-plus"></i> Add User</a>
     </div>
     

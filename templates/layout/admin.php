@@ -42,7 +42,7 @@ $cakeDescription = 'Superior Fitness Admin';
             <!-- Navbar-->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="<?= $this->Url->build(['controller' => 'Users','action' => 'index']);?>" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#!">Logout</a></li>
                     </ul>
@@ -55,15 +55,15 @@ $cakeDescription = 'Superior Fitness Admin';
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Tabs</div>
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href=<?= $this->Url->build(['controller' => 'Users','action' => 'index']);?>>
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-users"></i></div>
                                 Users
                             </a>
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href=<?= $this->Url->build(['controller' => 'Orders','action' => 'index']);?>>
                                 <div class="sb-nav-link-icon"><i class="fa-regular fa-rectangle-list"></i></i></div>
                                 Orders
                             </a>
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href=<?= $this->Url->build(['controller' => 'Products','action' => 'index']);?>>
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-dumbbell"></i></div>
                                 Products
                             </a>
