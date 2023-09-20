@@ -3,6 +3,7 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Product $product
  */
+$this->layout = 'admin';
 ?>
 <div class="row">
     <aside class="column">

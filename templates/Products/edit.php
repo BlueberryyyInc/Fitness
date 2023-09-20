@@ -4,6 +4,7 @@
  * @var \App\Model\Entity\Product $product
  * @var string[]|\Cake\Collection\CollectionInterface $orders
  */
+$this->layout = 'admin';
 ?>
 <div class="row">
     <aside class="column">

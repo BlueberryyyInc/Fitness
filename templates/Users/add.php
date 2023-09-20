@@ -3,12 +3,14 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\User $user
  */
+$this->layout = 'admin';
 ?>
 <div class="row">
     <aside class="column">
         <div class="side-nav">
             <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List Users'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+            <a href=<?= $this->Url->build(['action' => 'index'])?> class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+            <i class="fa-solid fa-arrow-left"></i> Back</a>
         </div>
     </aside>
     <div class="column-responsive column-80">

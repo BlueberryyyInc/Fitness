@@ -25,23 +25,22 @@ echo $this->Html->script("/js/datatables-simple-demo.js",['block'=>true]);
         <table id="datatablesSimple">
             <thead>
                 <tr>
-                    <th><?= $this->Paginator->sort('id') ?></th>
-                    <th><?= $this->Paginator->sort('user_name') ?></th>
-                    <th><?= $this->Paginator->sort('user_email') ?></th>
-                    <th><?= $this->Paginator->sort('user_phone') ?></th>
-                    <th><?= $this->Paginator->sort('user_emp_role') ?></th>
-                    <th class="actions"><?= __('Actions') ?></th>
+                    <th><?=h('User ID')?></th>
+                    <th><?=h('User Name')?></th>
+                    <th><?=h('User Email')?></th>
+                    <th><?=h('User Phone')?></th>
+                    <th><?=h('User Employee Role')?></th>
+                    <th><?=h('Actions')?></th>
                 </tr>
             </thead>
             <tfoot>
                 <tr>
-                <th>
-                    <?= $this->Paginator->sort('id') ?></th>
-                    <th><?= $this->Paginator->sort('user_name') ?></th>
-                    <th><?= $this->Paginator->sort('user_email') ?></th>
-                    <th><?= $this->Paginator->sort('user_phone') ?></th>
-                    <th><?= $this->Paginator->sort('user_emp_role') ?></th>
-                    <th class="actions"><?= __('Actions') ?></th>
+                    <th><?=h('User ID')?></th>
+                    <th><?=h('User Name')?></th>
+                    <th><?=h('User Email')?></th>
+                    <th><?=h('User Phone')?></th>
+                    <th><?=h('User Employee Role')?></th>
+                    <th><?=h('Actions')?></th>
                 </tr>
             </tfoot>
             <tbody>
