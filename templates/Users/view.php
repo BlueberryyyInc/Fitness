@@ -38,6 +38,14 @@
                     <th><?= __('Id') ?></th>
                     <td><?= $this->Number->format($user->id) ?></td>
                 </tr>
+                <tr>
+                    <th><?= __('Nonce') ?></th>
+                    <td><?= $this->Number->format($user->nonce) ?></td>
+                </tr>
+                <tr>
+                    <th><?= __('Nonce Expiry') ?></th>
+                    <td><?= h($user->nonce_expiry) ?></td>
+                </tr>
 
             </table>
         </div>

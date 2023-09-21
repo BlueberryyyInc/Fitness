@@ -28,6 +28,9 @@ $this->layout = 'admin';
                     echo $this->Form->control('user_phone');
                     echo $this->Form->control('user_emp_role');
                     echo $this->Form->control('password');
+                    echo $this->Form->control('nonce');
+                    echo $this->Form->control('nonce_expiry');
+
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>

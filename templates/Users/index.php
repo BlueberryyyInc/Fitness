@@ -19,7 +19,7 @@ echo $this->Html->script("/js/datatables-simple-demo.js",['block'=>true]);
 	    <a href=<?= $this->Url->build(['action' => 'add'])?> class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
         <i class="fa-solid fa-user-plus"></i> Add User</a>
     </div>
-    
+
 <div class="card mb-4">
     <div class="card-body">
         <table id="datatablesSimple">
@@ -51,6 +51,9 @@ echo $this->Html->script("/js/datatables-simple-demo.js",['block'=>true]);
                     <td><?= h($user->user_email) ?></td>
                     <td><?= h($user->user_phone) ?></td>
                     <td><?= h($user->user_emp_role) ?></td>
+                    <th><?= $this->Paginator->sort('nonce') ?></th>
+                    <th><?= $this->Paginator->sort('nonce_expiry') ?></th>
+
                     <td class="actions">
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id]) ?>
                         <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?>
@@ -60,5 +63,5 @@ echo $this->Html->script("/js/datatables-simple-demo.js",['block'=>true]);
             </tbody>
         </table>
     </div>
-    
+
 </div>
