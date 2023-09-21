@@ -1,5 +1,6 @@
 <?php
 $cakeDescription = 'Superior Fitness Admin';
+echo $this->Html->script("/js/scripts.js",['block'=>true]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -77,7 +78,6 @@ $cakeDescription = 'Superior Fitness Admin';
             </main>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/scripts1.js"></script>
         
         <?= $this->fetch('script') ?>
     </body>
