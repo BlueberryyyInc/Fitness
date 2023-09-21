@@ -51,8 +51,6 @@ echo $this->Html->script("/js/datatables-simple-demo.js",['block'=>true]);
                     <td><?= h($user->user_email) ?></td>
                     <td><?= h($user->user_phone) ?></td>
                     <td><?= h($user->user_emp_role) ?></td>
-                    <th><?= $this->Paginator->sort('nonce') ?></th>
-                    <th><?= $this->Paginator->sort('nonce_expiry') ?></th>
 
                     <td class="actions">
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id]) ?>
