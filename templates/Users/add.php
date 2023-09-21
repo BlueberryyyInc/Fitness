@@ -15,21 +15,53 @@ $this->layout = 'admin';
     </aside>
     <div class="column-responsive column-80">
         <div class="users form content">
-            <?= $this->Form->create($user) ?>
+        <?= $this->Form->create($user, ['class' => 'form']) ?>
             <fieldset>
                 <legend><?= __('Add User') ?></legend>
-                <?php
-                    echo $this->Form->control('user_name');
-                    echo $this->Form->control('user_email');
-                    echo $this->Form->control('user_phone');
-                    echo $this->Form->control('user_emp_role');
-                    echo $this->Form->control('password');
-                    echo $this->Form->control('nonce');
-                    echo $this->Form->control('nonce_expiry');
-
-                ?>
+                <div class="form-group">
+                    <?= $this->Form->control('user_name', [
+                        'class' => 'form-control',
+                        'label' => 'User Name',
+                    ]) ?>
+                </div>
+                <div class="form-group">
+                    <?= $this->Form->control('user_email', [
+                        'class' => 'form-control',
+                        'label' => 'User Email',
+                    ]) ?>
+                </div>
+                <div class="form-group">
+                    <?= $this->Form->control('user_phone', [
+                        'class' => 'form-control',
+                        'label' => 'User Phone',
+                    ]) ?>
+                </div>
+                <div class="form-group">
+                    <?= $this->Form->control('user_emp_role', [
+                        'class' => 'form-control',
+                        'label' => 'User Employee Role',
+                    ]) ?>
+                </div>
+                <div class="form-group">
+                    <?= $this->Form->control('password', [
+                        'class' => 'form-control',
+                        'label' => 'Password',
+                    ]) ?>
+                </div>
+                <div class="form-group">
+                    <?= $this->Form->control('nonce', [
+                        'class' => 'form-control',
+                        'label' => 'Nonce',
+                    ]) ?>
+                </div>
+                <div class="form-group">
+                    <?= $this->Form->control('nonce_expiry', [
+                        'class' => 'form-control',
+                        'label' => 'Nonce Expiry',
+                    ]) ?>
+                </div>
             </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
+            <?= $this->Form->button(__('Submit'), ['class' => 'btn btn-primary']) ?>
             <?= $this->Form->end() ?>
         </div>
     </div>
