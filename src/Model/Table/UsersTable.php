@@ -61,44 +61,45 @@ class UsersTable extends Table
     public function validationDefault(Validator $validator): Validator
     {
         $validator
-            ->scalar('user_name',"test123")
-            ->maxLength('user_name', 64, "test123")
-            ->requirePresence('user_name', 'create', "test123")
-            ->notEmptyString('user_name', "test123");
+            ->scalar('user_name')
+            ->maxLength('user_name', 64, "Name is too long")
+            ->requirePresence('user_name', 'create')
+            ->notEmptyString('user_name', "Please enter a name");
 
         $validator
-            ->scalar('user_email', "test123")
-            ->maxLength('user_email', 64, "test123")
-            ->requirePresence('user_email', 'create', "test123")
-            ->notEmptyString('user_email', "test123")
+            ->scalar('user_email')
+            ->maxLength('user_email', 128, "Please use a shorter email")
+            ->requirePresence('user_email', 'create')
+            ->notEmptyString('user_email', "Please enter an email")
             ->email('user_email',false, "Please enter a valid email");
 
         $validator
-            ->scalar('user_phone', "test123")
-            ->maxLength('user_phone', 10, "test123")
-            ->allowEmptyString('user_phone', "test123");
+            ->scalar('user_phone')
+            ->maxLength('user_phone', 10, "Phone number must be 10 digits")
+            ->minLength('user_phone', 10, "Phone number must be 10 digits")
+            ->allowEmptyString('user_phone', "Please enter a phone number");
 
         $validator
-            ->scalar('user_emp_role', "test123")
-            ->maxLength('user_emp_role', 64, "test123")
-            ->allowEmptyString('user_emp_role', "test123");
+            ->scalar('user_emp_role')
+            ->maxLength('user_emp_role', 64, "Should be a drop down list")
+            ->allowEmptyString('user_emp_role', "Please select a role");
 
         $validator
             ->integer('nonce', "test123")
-            ->requirePresence('nonce', 'create', "test123")
-            ->notEmptyString('nonce', "test123");
+            ->requirePresence('nonce', 'create', "this should be automated, error 1")
+            ->notEmptyString('nonce', "this should be automated, error 2");
 
         $validator
             ->dateTime('nonce_expiry', )
-            ->requirePresence('nonce_expiry', 'create', "test123")
-            ->notEmptyDateTime('nonce_expiry', "test123");
+            ->requirePresence('nonce_expiry', 'create', "this should be automated, error 3")
+            ->notEmptyDateTime('nonce_expiry', "this should be automated, error 4");
 
         $validator
             ->scalar('password')
             ->maxLength('password', 128, "Please use a shorter password")
             ->minLength('password',3,"Please use a longer password")
-            ->requirePresence('password', 'create', "test123")
-            ->notEmptyString('password', "test123");
+            ->requirePresence('password', 'create')
+            ->notEmptyString('password', "A password must be entered");
 
         return $validator;
     }
