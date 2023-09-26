@@ -61,6 +61,14 @@ echo $this->Html->script("/js/datatables-simple-demo.js",['block'=>true]);
                                 'class' => 'btn btn-primary btn-sm',
                             ]
                         ) ?>
+                        <?= $this->Html->link(
+                            '<i class="fas fa-view"></i> ' . __('View'),
+                            ['action' => 'view', $user->id],
+                            [
+                                'escape' => false,
+                                'class' => 'btn btn-primary btn-sm',
+                            ]
+                        ) ?>
                         <?= $this->Form->postLink(
                             '<i class="fas fa-trash"></i> ' . __('Delete'),
                             ['action' => 'delete', $user->id],
