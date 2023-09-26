@@ -43,9 +43,31 @@ echo $this->Html->script("/js/datatables-simple-demo.js",['block'=>true]);
                     <td><?= $this->Number->format($order->id) ?></td>
                     <td><?= $this->Number->format($order->cust_ID) ?></td>
                     <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $order->id]) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $order->id]) ?>
-                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $order->id], ['confirm' => __('Are you sure you want to delete # {0}?', $order->id)]) ?>
+                        <?= $this->Html->link(
+                            '<i class="fa-regular fa-eye"></i> ' . __('View'),
+                            ['action' => 'view', $order->id],
+                            [
+                                'escape' => false,
+                                'class' => 'btn btn-primary btn-sm',
+                            ]
+                        ) ?>
+                        <?= $this->Html->link(
+                            '<i class="fas fa-edit"></i> ' . __('Edit'),
+                            ['action' => 'edit', $order->id],
+                            [
+                                'escape' => false,
+                                'class' => 'btn btn-primary btn-sm',
+                            ]
+                        ) ?>
+                        <?= $this->Form->postLink(
+                            '<i class="fas fa-trash"></i> ' . __('Delete'),
+                            ['action' => 'delete', $order->id],
+                            [
+                                'confirm' => __('Are you sure you want to delete # {0}?', $order->id),
+                                'escape' => false,
+                                'class' => 'btn btn-danger btn-sm',
+                            ]
+                        ) ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>

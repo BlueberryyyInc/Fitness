@@ -8,8 +8,21 @@ $this->layout = 'admin';
 ?>
 <div class="row">
     <aside class="column">
-        <a href=<?= $this->Url->build(['action' => 'index'])?> class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-        <i class="fa-solid fa-arrow-left"></i> Back</a>
+        <div class="side-nav">
+            <h4 class="heading"><?= __('Actions') ?></h4>
+            <a href=<?= $this->Url->build(['action' => 'index'])?>
+                class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
+                <i class="fa-solid fa-arrow-left"></i> Back</a>
+            <?= $this->Form->postLink(
+                '<i class="fas fa-trash"></i> ' . __('Delete'),
+                ['action' => 'delete', $order->id],
+                [
+                    'confirm' => __('Are you sure you want to delete # {0}?', $order->id),
+                    'escape' => false,
+                    'class' => 'btn btn-danger btn-sm',
+                ]
+            ) ?>
+        </div>
     </aside>
     <div class="column-responsive column-80">
         <div class="orders form content">
@@ -32,13 +45,6 @@ $this->layout = 'admin';
             </fieldset>
             <?= $this->Form->button(__('Submit'), ['class' => 'btn btn-primary']) ?>
             <?= $this->Form->end() ?>
-        </div>
-        <div>
-        <?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $order->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $order->id), 'class' => 'side-nav-item']
-            ) ?>
         </div>
     </div>
 </div>

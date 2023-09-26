@@ -12,12 +12,16 @@ $this->Html->script("https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootst
     <aside class="column">
         <div class="side-nav">
             <h4 class="heading"><?= __('Actions') ?></h4>
-            <a href=<?= $this->Url->build(['action' => 'index'])?> class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+            <a href=<?= $this->Url->build(['action' => 'index'])?> class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
             <i class="fa-solid fa-arrow-left"></i> Back</a>
             <?= $this->Form->postLink(
-                __('Delete'),
+                '<i class="fas fa-trash"></i> ' . __('Delete'),
                 ['action' => 'delete', $product->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $product->id), 'class' => 'side-nav-item']
+                [
+                    'confirm' => __('Are you sure you want to delete # {0}?', $product->id),
+                    'escape' => false,
+                    'class' => 'btn btn-danger btn-sm',
+                ]
             ) ?>
         </div>
     </aside>

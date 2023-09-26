@@ -38,7 +38,7 @@ echo $this->Html->script("https://use.fontawesome.com/releases/v6.3.0/js/all.js"
             <!-- Navbar-->
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                 <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-                    <a href=<?= $this->Url->build(['controller' => 'Customers','action' => 'index'])?> class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                    <a href=<?= $this->Url->build(['controller' => 'Customers','action' => 'index'])?> class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
                     Logout <i class="fa-solid fa-person-walking-arrow-right"></i></i></a>
                 </ul>
             </form>

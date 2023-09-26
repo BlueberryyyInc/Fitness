@@ -50,9 +50,31 @@ echo $this->Html->script("/js/datatables-simple-demo.js",['block'=>true]);
                             <td><?= $this->Number->format($product->product_cost) ?></td>
                             <td><?= $this->Number->format($product->inventory_amount) ?></td>
                             <td class="actions">
-                                <?= $this->Html->link(__('View'), ['action' => 'view', $product->id]) ?>
-                                <?= $this->Html->link(__('Edit'), ['action' => 'edit', $product->id]) ?>
-                                <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $product->id], ['confirm' => __('Are you sure you want to delete # {0}?', $product->id)]) ?>
+                                <?= $this->Html->link(
+                                    '<i class="fa-regular fa-eye"></i> ' . __('View'),
+                                    ['action' => 'view', $product->id],
+                                    [
+                                        'escape' => false,
+                                        'class' => 'btn btn-primary btn-sm',
+                                    ]
+                                ) ?>
+                                <?= $this->Html->link(
+                                    '<i class="fas fa-edit"></i> ' . __('Edit'),
+                                    ['action' => 'edit', $product->id],
+                                    [
+                                        'escape' => false,
+                                        'class' => 'btn btn-primary btn-sm',
+                                    ]
+                                ) ?>
+                                <?= $this->Form->postLink(
+                                    '<i class="fas fa-trash"></i> ' . __('Delete'),
+                                    ['action' => 'delete', $product->id],
+                                    [
+                                        'confirm' => __('Are you sure you want to delete # {0}?', $product->id),
+                                        'escape' => false,
+                                        'class' => 'btn btn-danger btn-sm',
+                                    ]
+                                ) ?>
                             </td>
                         </tr>
                         <?php endforeach; ?>

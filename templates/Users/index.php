@@ -53,8 +53,23 @@ echo $this->Html->script("/js/datatables-simple-demo.js",['block'=>true]);
                     <td><?= h($user->user_emp_role) ?></td>
 
                     <td class="actions">
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id]) ?>
-                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?>
+                        <?= $this->Html->link(
+                            '<i class="fas fa-edit"></i> ' . __('Edit'),
+                            ['action' => 'edit', $user->id],
+                            [
+                                'escape' => false,
+                                'class' => 'btn btn-primary btn-sm',
+                            ]
+                        ) ?>
+                        <?= $this->Form->postLink(
+                            '<i class="fas fa-trash"></i> ' . __('Delete'),
+                            ['action' => 'delete', $user->id],
+                            [
+                                'confirm' => __('Are you sure you want to delete # {0}?', $user->id),
+                                'escape' => false,
+                                'class' => 'btn btn-danger btn-sm',
+                            ]
+                        ) ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>
