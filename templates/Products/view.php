@@ -4,43 +4,64 @@
  * @var \App\Model\Entity\Product $product
  */
 $this->layout = 'admin';
+$this->Html->css(['normalize.min', 'milligram.min', 'cake','styles']);
+$this->Html->script("https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js",['block'=>true]);
 ?>
 <div class="row">
     <aside class="column">
         <div class="side-nav">
             <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('Edit Product'), ['action' => 'edit', $product->id], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete Product'), ['action' => 'delete', $product->id], ['confirm' => __('Are you sure you want to delete # {0}?', $product->id), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('List Products'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('New Product'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
+            <a href=<?= $this->Url->build(['action' => 'index'])?> class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
+            <i class="fa-solid fa-arrow-left"></i> Back</a>
+            <?= $this->Html->link(
+                '<i class="fas fa-edit"></i> ' . __('Edit'),
+                ['action' => 'edit', $product->id],
+                [
+                    'escape' => false,
+                    'class' => 'btn btn-primary btn-sm',
+                ]
+            ) ?>
+            <a href=<?= $this->Url->build(['action' => 'add'])?> class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+            <i class="fa-solid fa-square-plus"></i> Add Product</a>
+            <?= $this->Form->postLink(
+                '<i class="fas fa-trash"></i> ' . __('Delete'),
+                ['action' => 'delete', $product->id],
+                [
+                    'confirm' => __('Are you sure you want to delete # {0}?', $product->id),
+                    'escape' => false,
+                    'class' => 'btn btn-danger btn-sm',
+                ]
+            ) ?>
         </div>
     </aside>
     <div class="column-responsive column-80">
         <div class="products view content">
-            <h3><?= h($product->id) ?></h3>
-            <table>
-                <tr>
-                    <th><?= __('Product Name') ?></th>
-                    <td><?= h($product->product_name) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Id') ?></th>
-                    <td><?= $this->Number->format($product->id) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Product Cost') ?></th>
-                    <td><?= $this->Number->format($product->product_cost) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Inventory Amount') ?></th>
-                    <td><?= $this->Number->format($product->inventory_amount) ?></td>
-                </tr>
-            </table>
+            <h3>Product ID: <?= h($product->id) ?></h3>
+                <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                            <th><?= __('Product Name') ?></th>
+                            <td><?= h($product->product_name) ?></td>
+                        </tr>
+                        <tr>
+                            <th><?= __('Id') ?></th>
+                            <td><?= $this->Number->format($product->id) ?></td>
+                        </tr>
+                        <tr>
+                            <th><?= __('Product Cost') ?></th>
+                            <td><?= $this->Number->format($product->product_cost) ?></td>
+                        </tr>
+                        <tr>
+                            <th><?= __('Inventory Amount') ?></th>
+                            <td><?= $this->Number->format($product->inventory_amount) ?></td>
+                        </tr>
+                    </tbody>
+                </table>
             <div class="related">
                 <h4><?= __('Related Orders') ?></h4>
                 <?php if (!empty($product->orders)) : ?>
                 <div class="table-responsive">
-                    <table>
+                    <table class ="table table-hover">
                         <tr>
                             <th><?= __('Id') ?></th>
                             <th><?= __('Cust ID') ?></th>
@@ -51,9 +72,34 @@ $this->layout = 'admin';
                             <td><?= h($orders->id) ?></td>
                             <td><?= h($orders->cust_ID) ?></td>
                             <td class="actions">
-                                <?= $this->Html->link(__('View'), ['controller' => 'Orders', 'action' => 'view', $orders->id]) ?>
-                                <?= $this->Html->link(__('Edit'), ['controller' => 'Orders', 'action' => 'edit', $orders->id]) ?>
-                                <?= $this->Form->postLink(__('Delete'), ['controller' => 'Orders', 'action' => 'delete', $orders->id], ['confirm' => __('Are you sure you want to delete # {0}?', $orders->id)]) ?>
+                                <?= $this->Html->link(
+                                    '<i class="fa-regular fa-eye"></i> ' . __('View'),
+                                    [   'controller' => 'Orders',
+                                        'action' => 'view', $orders->id],
+                                    [
+                                        'escape' => false,
+                                        'class' => 'btn btn-primary btn-sm',
+                                    ]
+                                ) ?>
+                                <?= $this->Html->link(
+                                    '<i class="fas fa-edit"></i> ' . __('Edit'),
+                                    [   'controller' => 'Orders',
+                                        'action' => 'edit', $orders->id],
+                                    [
+                                        'escape' => false,
+                                        'class' => 'btn btn-primary btn-sm',
+                                    ]
+                                ) ?>
+                                <?= $this->Form->postLink(
+                                    '<i class="fas fa-trash"></i> ' . __('Delete'),
+                                    [   'controller' => 'Orders',
+                                        'action' => 'delete', $orders->id],
+                                    [
+                                        'confirm' => __('Are you sure you want to delete # {0}?', $orders->id),
+                                        'escape' => false,
+                                        'class' => 'btn btn-danger btn-sm',
+                                    ]
+                                ) ?>
                             </td>
                         </tr>
                         <?php endforeach; ?>
