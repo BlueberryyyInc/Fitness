@@ -54,16 +54,16 @@ echo $this->Html->script("/js/datatables-simple-demo.js",['block'=>true]);
 
                     <td class="actions">
                         <?= $this->Html->link(
-                            '<i class="fas fa-edit"></i> ' . __('Edit'),
-                            ['action' => 'edit', $user->id],
+                            '<i class="fa-regular fa-eye"></i> ' . __('View'),
+                            ['action' => 'view', $user->id],
                             [
                                 'escape' => false,
                                 'class' => 'btn btn-primary btn-sm',
                             ]
                         ) ?>
                         <?= $this->Html->link(
-                            '<i class="fas fa-view"></i> ' . __('View'),
-                            ['action' => 'view', $user->id],
+                            '<i class="fas fa-edit"></i> ' . __('Edit'),
+                            ['action' => 'edit', $user->id],
                             [
                                 'escape' => false,
                                 'class' => 'btn btn-primary btn-sm',
