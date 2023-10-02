@@ -38,7 +38,7 @@ echo $this->Html->script("https://use.fontawesome.com/releases/v6.3.0/js/all.js"
             <!-- Navbar-->
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                 <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-                    <a href=<?= $this->Url->build(['controller' => 'Customers','action' => 'index'])?> class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
+                    <a href=<?= $this->Url->buildFromPath('Customers::index');?> class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
                     Logout <i class="fa-solid fa-person-walking-arrow-right"></i></i></a>
                 </ul>
             </form>
@@ -49,15 +49,26 @@ echo $this->Html->script("https://use.fontawesome.com/releases/v6.3.0/js/all.js"
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Tabs</div>
-                            <a class="nav-link" href=<?= $this->Url->build(['controller' => 'Users','action' => 'index']);?>>
+                            <?= $this->Html->link(
+                            '<div class="sb-nav-link-icon"><i class="fa-solid fa-content"></i></div>Content Blocks',
+                            [
+                                'plugin' => 'ContentBlocks',
+                                'controller' => 'ContentBlocks',
+                                'action' => 'index',
+                                'layout' => 'admin',
+                                'fullBase' => 'true',
+                            ],
+                            ['escape' => false, 'class' => 'nav-link']
+                            ) ?>
+                            <a class="nav-link" href=<?= $this->Url->buildFromPath('Users::index');?>>
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-users"></i></div>
                                 Users
                             </a>
-                            <a class="nav-link" href=<?= $this->Url->build(['controller' => 'Orders','action' => 'index']);?>>
+                            <a class="nav-link" href=<?= $this->Url->buildFromPath('Orders::index');?>>
                                 <div class="sb-nav-link-icon"><i class="fa-regular fa-rectangle-list"></i></i></div>
                                 Orders
                             </a>
-                            <a class="nav-link" href=<?= $this->Url->build(['controller' => 'Products','action' => 'index']);?>>
+                            <a class="nav-link" href=<?= $this->Url->buildFromPath('Products::index');?>>
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-dumbbell"></i></div>
                                 Products
                             </a>

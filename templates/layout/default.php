@@ -15,6 +15,12 @@
  */
 
 $cakeDescription = 'Superior Fitness';
+$plugin = $this->request->getParam('plugin');
+$controller = $this->request->getParam('controller');
+$action = $this->request->getParam('action');
+if ($plugin === 'ContentBlocks' && $controller === 'ContentBlocks' && $action === 'index') {
+    $this->layout = 'admin';
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,8 +28,7 @@ $cakeDescription = 'Superior Fitness';
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-        <?= $cakeDescription ?>:
-        <?= $this->fetch('title') ?>
+        <?= $this->ContentBlock->text('website-title'); ?>
     </title>
     <!-- Favicon-->
     <?= $this->Html->meta(

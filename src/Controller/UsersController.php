@@ -26,10 +26,7 @@ class UsersController extends AppController
 
     public function index()
     {
-        /* $this->layout = 'admin';
-        debug($this->layout); */    //FIX: does not change layout as intended
-
-        $users = $this->paginate($this->Users);
+         $users = $this->paginate($this->Users);
         $this->set(compact('users'));
     }
 
@@ -127,10 +124,6 @@ class UsersController extends AppController
         $this->set(compact('user'));
 
     }
-
-
-
-
 
     /**
      * Edit method

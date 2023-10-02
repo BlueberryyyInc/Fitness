@@ -8,9 +8,9 @@
                 <?= $this->Flash->render() ?>
                 <?= $this->fetch('content') ?>
                 <!-- Renamed the project and created a slogan -->
-                <div class="masthead-subheading">  <a class="navbar-brand" href="<?= $this->Url->build('/') ?>"><img src="assets/img/navbar-logo-removebg.png" alt="..." width="465" height="133"/></a>
+                <div class="masthead-subheading">  <a class="navbar-brand" href="<?= $this->Url->build('/') ?>"><?= $this->ContentBlock->image('logo'); ?></a>
                 </div>
-                <div class="masthead-heading text-uppercase">Empowerment, Strength, Potential</div>
+                <div class="masthead-heading text-uppercase"><?= $this->ContentBlock->text('home-slogan'); ?></div>
                 <!--changed href to send to portfolio which will be our products display-->
                 <a class="btn btn-primary btn-xl text-uppercase" href="BuyProducts">Shop Now</a>
             </div>
