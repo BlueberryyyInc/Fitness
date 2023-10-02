@@ -6,7 +6,7 @@ class CustomersController extends AppController{
     public function initialize(): void
     {
         parent::initialize();
-        $this->Authentication->allowUnauthenticated(['index','products','contact','about']);
+        $this->Authentication->allowUnauthenticated(['index','contact','about']);
     }
     public function index(){
         $this->layout='mylayout';
