@@ -59,6 +59,7 @@ $action = $this->request->getParam('action');
                         <li class="nav-item"><a class="nav-link" href="BuyProducts">Products</a></li>
                         <li class="nav-item"><a class="nav-link" href="About">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="Contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Repair">Repairs</a></li>
                         <!--TODO make this link to admin dashboard login-->
                         <li class="nav-item"><a class="nav-link" href="login">Login</a></li>
                     </ul>

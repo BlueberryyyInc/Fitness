@@ -6,7 +6,7 @@
         public function initialize(): void
         {
             parent::initialize();
-            $this->Authentication->allowUnauthenticated(['index','products','about']);
+            $this->Authentication->allowUnauthenticated(['index','about']);
         }
 
         public function index(){
