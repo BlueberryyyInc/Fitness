@@ -19,8 +19,8 @@
         <section class="page-section" id="services">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Services</h2>
-                    <h3 class="section-subheading text-muted">We make fitness accessible for ameteurs and professionals.</h3>
+                    <h2 class="section-heading text-uppercase"><?= $this->ContentBlock->text('home-heading'); ?></h2>
+                    <h3 class="section-subheading text-muted"><?= $this->ContentBlock->text('home-subheading'); ?></h3>
                 </div>
                 <div class="row text-center">
                     <div class="col-md-4">
@@ -28,31 +28,31 @@
                         <a href="Contact">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-danger"></i>
-                            <i class="fas fa-truck fa-stack-1x fa-inverse"></i>
+                            <?= $this->ContentBlock->html('content-icon1') ?>
                         </span>
                         </a>
-                        <h4 class="my-3">Home Delivery</h4>
-                        <p class="text-muted services-paragraph">We help you set up your home gym purchases to create the home fitness environment that will allow you to reach all of your goals.</p>
+                        <h4 class="my-3"><?= $this->ContentBlock->text('content-title1') ?></h4>
+                        <p class="text-muted services-paragraph"><?= $this->ContentBlock->html('content-text1') ?></p>
                     </div>
                     <div class="col-md-4">
                         <a href="Contact">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-danger"></i>
-                            <i class="fas fa-building fa-stack-1x fa-inverse"></i>
+                            <?= $this->ContentBlock->html('content-icon2') ?>
                         </span>
                         </a>
-                        <h4 class="my-3">Wholesale</h4>
-                        <p class="text-muted services-paragraph">We can help you build your ideal fitness centre to support your business in providing fitness services to your clients.</p>
+                        <h4 class="my-3"><?= $this->ContentBlock->text('content-title2') ?></h4>
+                        <p class="text-muted services-paragraph"><?= $this->ContentBlock->html('content-text2') ?></p>
                     </div>
                     <div class="col-md-4">
                         <a href="Repair">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-danger"></i>
-                            <i class="fas fa-cogs fa-stack-1x fa-inverse"></i>
+                            <?= $this->ContentBlock->html('content-icon3') ?>
                         </span>
                         </a>
-                        <h4 class="my-3">Repair</h4>
-                        <p class="text-muted services-paragraph">While we stock quality products, repairs are sometimes necessary. As such, we provide extensive repair services for the products that we sell.</p>
+                        <h4 class="my-3"><?= $this->ContentBlock->text('content-title3') ?></h4>
+                        <p class="text-muted services-paragraph"><?= $this->ContentBlock->html('content-text3') ?></p>
                     </div>
                 </div>
             </div>

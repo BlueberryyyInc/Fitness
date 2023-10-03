@@ -14,13 +14,9 @@
  * @var \App\View\AppView $this
  */
 
-$cakeDescription = 'Superior Fitness';
 $plugin = $this->request->getParam('plugin');
 $controller = $this->request->getParam('controller');
 $action = $this->request->getParam('action');
-if ($plugin === 'ContentBlocks' && $controller === 'ContentBlocks' && $action === 'index') {
-    $this->layout = 'admin';
-}
 ?>
 <!DOCTYPE html>
 <html>
@@ -55,7 +51,7 @@ if ($plugin === 'ContentBlocks' && $controller === 'ContentBlocks' && $action ==
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
             <div class="container px-4">
-                <a class="navbar-brand" href="Customers">Superior Fitness</a>
+                <a class="navbar-brand" href=<?= $this->Url->build('/') ?>>Superior Fitness</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
@@ -180,7 +176,7 @@ if ($plugin === 'ContentBlocks' && $controller === 'ContentBlocks' && $action ==
     <footer class="footer py-4">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">Copyright &copy; Superior Fitness 2023</div>
+                    <div class="col-lg-4 text-lg-start"><?= $this->ContentBlock->text('copyright-message') ?></div>
                     <div class="col-lg-4 my-3 my-lg-0">
 <!--                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>-->
 <!--                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>-->

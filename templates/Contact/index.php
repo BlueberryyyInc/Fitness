@@ -1,36 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <?= $this->Html->charset() ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-    <title>
-        <?= $this->fetch('title') ?>
-    </title>
-
-    <!-- Favicon-->
-    <?= $this->Html->meta(
-        'favicon.ico',
-        '/favicon.ico',
-        ['type' => 'icon']
-    );
-    ?>
-    <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
-    <!-- Core theme CSS (includes Bootstrap)-->
-
-    <?= $this->Html->css('/css/styles.css') ?>
-
-    <?= $this->fetch('meta') ?>
-    <?= $this->fetch('css') ?>
-    <?= $this->fetch('script') ?>
-</head>
 <body id="page-top">
-
 <!-- Contact-->
 <section class="page-section" id="contact">
     <div class="container">
@@ -44,68 +14,24 @@
             </div>
             <div id="business-info" class="col-6">
                 <div class="row">
-                    <div class="col-12"><h1>Superior Fitness</h1></div></div>
+                    <div class="col-12"><h1><?= $this->ContentBlock->text('contact-name'); ?></h1></div></div>
                 <div class="row">
                     <div class="col-1"><p>Address:</p></div>
-                    <div class="col-11"><p>100 Superior Fitness Way, Melbourne, Victoria</p></div>
+                    <div class="col-11"><p><?= $this->ContentBlock->text('contact-address'); ?></p></div>
                 </div>
                 <div class="row">
                     <div class="col-1"><p>Phone</p></div>
-                    <div class="col-11"><p>05757575</p></div>
+                    <div class="col-11"><p><?= $this->ContentBlock->text('contact-number'); ?></p></div>
                 </div>
                 <div class="row">
                     <div class="col-1"><p>Email:</p></div>
-                    <div class="col-11"><p>damien@superiorfitness.com</p></div>
+                    <div class="col-11"><p><?= $this->ContentBlock->text('contact-email'); ?></p></div>
                 </div>
                 <div class="row">
                     <div class="col-sm-8"><p>Opening Hours:</p>
-                        <table class="table mt-4">
-                            <thead>
-                            <tr>
-                                <th scope="col">Day</th>
-                                <th scope="col">Opening Time</th>
-                                <th scope="col">Closing Time</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>Monday</td>
-                                <td>9:00 AM</td>
-                                <td>5:00 PM</td>
-                            </tr>
-                            <tr>
-                                <td>Tuesday</td>
-                                <td>9:00 AM</td>
-                                <td>5:00 PM</td>
-                            </tr>
-                            <tr>
-                                <td>Wednesday</td>
-                                <td>9:00 AM</td>
-                                <td>5:00 PM</td>
-                            </tr>
-                            <tr>
-                                <td>Thursday</td>
-                                <td>9:00 AM</td>
-                                <td>5:00 PM</td>
-                            </tr>
-                            <tr>
-                                <td>Friday</td>
-                                <td>9:00 AM</td>
-                                <td>5:00 PM</td>
-                            </tr>
-                            <tr>
-                                <td>Saturday</td>
-                                <td>10:00 AM</td>
-                                <td>3:00 PM</td>
-                            </tr>
-                            <tr>
-                                <td>Sunday</td>
-                                <td>Closed</td>
-                                <td>Closed</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div></div>
+                    <?= $this->ContentBlock->html('contact-hours'); ?>
+                    </div>
+                </div>
             </div>
         </div>
         <br>

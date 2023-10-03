@@ -34,7 +34,7 @@ echo $this->Html->script("https://use.fontawesome.com/releases/v6.3.0/js/all.js"
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="#">SF Admin</a>
+            <a class="navbar-brand ps-3" href="">Superior Fitness Admin</a>
             <!-- Navbar-->
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                 <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
@@ -50,7 +50,7 @@ echo $this->Html->script("https://use.fontawesome.com/releases/v6.3.0/js/all.js"
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Tabs</div>
                             <?= $this->Html->link(
-                            '<div class="sb-nav-link-icon"><i class="fa-solid fa-content"></i></div>Content Blocks',
+                            '<div class="sb-nav-link-icon"><i class="fa-solid fa-pen-to-square"></i></div>Content Blocks',
                             [
                                 'plugin' => 'ContentBlocks',
                                 'controller' => 'ContentBlocks',
