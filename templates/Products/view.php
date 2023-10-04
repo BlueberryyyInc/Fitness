@@ -55,6 +55,22 @@ $this->Html->script("https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootst
                             <th><?= __('Inventory Amount') ?></th>
                             <td><?= $this->Number->format($product->inventory_amount) ?></td>
                         </tr>
+                        <tr>
+                            <th><?= __('Product Description') ?></th>
+                            <td><?= h($product->product_description) ?></td>
+                        </tr>
+                        <tr>
+                            <th><?= __('Product Brand') ?></th>
+                            <td><?= h($product->product_brand) ?></td>
+                        </tr>
+                        <tr>
+                            <th><?= __('Product Category') ?></th>
+                            <td><?= h($product->product_brand) ?></td>
+                        </tr>
+                        <tr>
+                            <th><?= __('Product Image Path') ?></th>
+                            <td><?= h($product->product_brand) ?></td>
+                        </tr>
                     </tbody>
                 </table>
             <div class="related">

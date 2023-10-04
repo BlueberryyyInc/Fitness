@@ -40,6 +40,30 @@ echo $this->Html->script("https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/b
                     ]) ?>
                 </div>
                 <div class="form-group">
+                    <?= $this->Form->control('product_description', [
+                        'class' => 'form-control',
+                        'label' => 'Product Description',
+                    ]) ?>
+                </div>
+                <div class="form-group">
+                    <?= $this->Form->control('product_brand', [
+                        'class' => 'form-control',
+                        'label' => 'Product Brand',
+                    ]) ?>
+                </div>
+                <div class="form-group">
+                    <?= $this->Form->control('product_category', [
+                        'class' => 'form-control',
+                        'label' => 'Product Category',
+                    ]) ?>
+                </div>
+                <div class="form-group">
+                    <?= $this->Form->control('product_image_path', [
+                        'class' => 'form-control',
+                        'label' => 'Product Image Path',
+                    ]) ?>
+                </div>
+                <div class="form-group">
                     <?= $this->Form->control('orders._ids', [
                         'options' => $orders,
                         'class' => 'form-control',
