@@ -4,6 +4,7 @@
  * @var \App\Model\Entity\User $user
  */
 $this->layout = 'admin';
+$this->myRandomNumber = random_int(1,999999999999999999);
 ?>
 <div class="row">
     <aside class="column">
@@ -55,6 +56,7 @@ $this->layout = 'admin';
                     <?= $this->Form->control('nonce', [
                         'class' => 'form-control',
                         'label' => 'Nonce',
+                        'default' => $this->myRandomNumber,
                     ]) ?>
                 </div>
                 <div class="form-group">
