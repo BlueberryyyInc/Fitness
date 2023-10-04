@@ -33,19 +33,19 @@ class StripesController extends AppController
         $mailer = new Mailer('default');
         $mailer
             ->setViewVars([
-                'firstName' => $_REQUEST['firstName'],
-                'lastName' => $_REQUEST['lastName'],
-                'phone' => $_REQUEST['phone'],
-                'email' => $_REQUEST['email'],
-                'address' => $_REQUEST['address'],
-                'address2' => $_REQUEST['address2'],
-                'country' => $_REQUEST['country'],
-                'state' => $_REQUEST['state'],
-                'postcode' => $_REQUEST['postcode'],
+                'firstName' => $_POST['firstName'],
+                'lastName' => $_POST['lastName'],
+                'phone' => $_POST['phone'],
+                'email' => $_POST['email'],
+                'address' => $_POST['address'],
+                'address2' => $_POST['address2'],
+                'country' => $_POST['country'],
+                'state' => $_POST['state'],
+                'postcode' => $_POST['postcode'],
             ])
             ->setTransport('smtp')
             ->setFrom(['superiorfitness[at]zohomail.com.au' => 'Superior Fitness Contact Enquiry'])
-            ->setTo('mackenziefletcher@hotmail.com')
+            ->setTo('superiorfitness@zohomail.com.au')
             ->setEmailFormat('html')
             ->setSubject('New Contact Enquiry')
             ->viewBuilder()

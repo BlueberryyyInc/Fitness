@@ -154,7 +154,6 @@
                     <hr class="my-4">
 
                     <h4 class="mb-3">Payment</h4>
-
                     <div class="my-3">
                         <div class="form-check">
                             <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
@@ -167,7 +166,7 @@
                     </div>
 
                     <div class="row gy-3">
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <label for="cc-name" class="form-label">Name on card</label>
                             <input type="text" class="form-control" id="cc-name" placeholder="" required>
                             <small class="text-muted">Full name as displayed on card</small>
@@ -176,29 +175,45 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="row">
+                        <div class="col-md-9">
                             <label for="cc-number" class="form-label">Credit card number</label>
-                            <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                            <input type="text" class="form-control card-number" id="cc-number" placeholder="" required>
                             <div class="invalid-feedback">
                                 Credit card number is required
                             </div>
                         </div>
 
                         <div class="col-md-3">
-                            <label for="cc-expiration" class="form-label">Expiration</label>
-                            <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                            <label for="cc-cvv" class="form-label">CVV</label>
+                            <input type="text" class="form-control card-cvc" id="cc-cvv" placeholder="" required>
+                            <div class="invalid-feedback">
+                                Security code required
+                            </div>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class='col-md-3 expiration required'>
+                            <label class='control-label'>Expiration Month</label>
+                            <input
+                                class='form-control card-expiry-month' placeholder='MM' size='2'
+                                type='text' required>
+                            <div class="invalid-feedback">
+                                Expiration date required
+                            </div>
+                        </div>
+                        <div class='col-md-3 expiration required'>
+                            <label class='control-label'>Expiration Year</label>
+                            <input
+                                class='form-control card-expiry-year' placeholder='YYYY' size='4'
+                                type='text' required>
                             <div class="invalid-feedback">
                                 Expiration date required
                             </div>
                         </div>
 
-                        <div class="col-md-3">
-                            <label for="cc-cvv" class="form-label">CVV</label>
-                            <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-                            <div class="invalid-feedback">
-                                Security code required
-                            </div>
                         </div>
+
                     </div>
 
                     <hr class="my-4">
@@ -210,14 +225,6 @@
             </div>
         </div>
     </main>
-    <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">&copy; 2023 Superior Fitness</p>
-        <ul class="list-inline">
-            <!--TODO Fix These-->
-            <li class="list-inline-item"><a href="#">Privacy</a></li>
-            <li class="list-inline-item"><a href="#">Terms</a></li>
-        </ul>
-    </footer>
 </div>
 
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>

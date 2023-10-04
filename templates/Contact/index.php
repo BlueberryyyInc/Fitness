@@ -46,48 +46,38 @@
             <!-- The popup form -->
             <div class="popup" id="popup">
                 <h2 class="display-2 text-center">Enquiry Form</h2>
-                <form id="contactForm" action="mailto:damien@superiorfitness.com" method="post" enctype="text/plain">
-                    <div class="row align-items-stretch mb-5">
-                        <div>
-                            <div class="form-group">
-                                <label for="name">Full Name</label>
-                                <input class="form-control" id="name" name="Name" type="text" placeholder="Enter Full Name" required />
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input class="form-control" id="email" name="Email" type="email" placeholder="Enter Preferred Contact Email" required />
-                            </div>
-                            <div class="form-group mb-md-0">
-                                <label for="phone">Phone</label>
-                                <input class="form-control" id="phone" name="Phone" type="tel" placeholder="Enter Phone" required />
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input class="form-control" id="subject" name="Subject" type="text" placeholder="Enter Subject" required />
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Your Message</label>
-                                <textarea class="form-control" id="message" name="Message" rows="4" placeholder="Your Message" required></textarea>
-                            </div>
+                <?= $this->Form->create(null, ['url' => ['controller' => 'Contact', 'action' => 'send']]) ?>
+                <div class="row align-items-stretch mb-5">
+                    <div>
+                        <div class="form-group">
+                            <?= $this->Form->control('name', ['class' => 'form-control', 'required' => true]) ?>
+                        </div>
+                        <div class="form-group">
+                            <?= $this->Form->control('email', ['class' => 'form-control', 'required' => true]) ?>
+                        </div>
+                        <div class="form-group mb-md-0">
+                            <?= $this->Form->control('phone', ['class' => 'form-control', 'required' => true]) ?>
+                        </div>
+                        <div class="form-group">
+                            <?= $this->Form->control('subject', ['class' => 'form-control', 'required' => true]) ?>
+                        </div>
+                        <div class="form-group">
+                            <?= $this->Form->control('message', ['class' => 'form-control', 'rows' => '4', 'required' => true]) ?>
                         </div>
                     </div>
-                    <!-- Submit Button -->
                     <div class="text-center">
-                        <button class="btn btn-primary btn-xl text-uppercase" id="submit" name="submit" type="submit" value="Send">Send Message</button>
-                        <button class="btn btn-primary btn-xl text-uppercase" id="close" name="close" onclick="closePopup()">Close</button>
+
+                    <?= $this->Form->button('Send Message', ['class' => 'btn btn-primary btn-xl text-uppercase', 'type' => 'submit', 'name' => 'submit', 'value' => 'Send']) ?>
+                    <?= $this->Form->button('Close', ['class' => 'btn btn-primary btn-xl text-uppercase', 'type' => 'button', 'name' => 'close', 'onclick' => 'closePopup()']) ?>
+                    <?= $this->Form->end() ?>
                     </div>
-                </form>
 
 
-            </div>
-            <div><h1>Test Form</h1>
-                <?
-                echo $this->Form->create($contact);
-                echo $this->Form->control('name');
-                echo $this->Form->control('email');
-                echo $this->Form->control('body');
-                echo $this->Form->button('Submit');
-                echo $this->Form->end();?>
+                </div>
+                </div>
+                <!-- Submit Button -->
+
+
             </div>
 
             <script>
