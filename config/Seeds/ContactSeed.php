@@ -12,7 +12,7 @@ class ContactSeed extends AbstractSeed
             [
                 'parent' => 'Contact',
                 'label' => 'Business Name',
-                'description' => 'Name of your business',
+                'description' => 'Name of your business, used in both contact and repair pages',
                 'slug' => 'contact-name',
                 'type' => 'text',
                 'value' => 'Superior Fitness',
@@ -20,7 +20,7 @@ class ContactSeed extends AbstractSeed
             [
                 'parent' => 'Contact',
                 'label' => 'Address',
-                'description' => 'Address of your business',
+                'description' => 'Address of your business, used in both contact and repair pages',
                 'slug' => 'contact-address',
                 'type' => 'text',
                 'value' => '100 Superior Fitness Way, Melbourne, Victoria',
@@ -28,7 +28,7 @@ class ContactSeed extends AbstractSeed
             [
                 'parent' => 'Contact',
                 'label' => 'Buisness Number',
-                'description' => 'Contact Number of your business',
+                'description' => 'Contact Number of your business, used in both contact and repair pages',
                 'slug' => 'contact-number',
                 'type' => 'text',
                 'value' => '05757575',
@@ -36,7 +36,7 @@ class ContactSeed extends AbstractSeed
             [
                 'parent' => 'Contact',
                 'label' => 'Email',
-                'description' => 'Email address of your business',
+                'description' => 'Email address of your business, used in both contact and repair pages',
                 'slug' => 'contact-email',
                 'type' => 'text',
                 'value' => 'damien@superiorfitness.com',
