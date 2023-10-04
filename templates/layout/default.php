@@ -55,12 +55,12 @@ $action = $this->request->getParam('action');
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="Customers">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="BuyProducts">Products</a></li>
-                        <li class="nav-item"><a class="nav-link" href="About">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Contact">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Repair">Repairs</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Carts">My Cart</a></li>
+                    <li class="nav-item"><a class="nav-link" href=<?= $this->Url->buildFromPath('Customers::index');?>>Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href=<?= $this->Url->buildFromPath('BuyProducts::index');?>>Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href=<?= $this->Url->buildFromPath('About::index');?>>About</a></li>
+                        <li class="nav-item"><a class="nav-link" href=<?= $this->Url->buildFromPath('Contact::index');?>>Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href=<?= $this->Url->buildFromPath('Repair::index');?>>Repairs</a></li>
+                        <li class="nav-item"><a class="nav-link" href=<?= $this->Url->buildFromPath('Carts::index');?>>My Cart</a></li>
                         <!--TODO make this link to admin dashboard login-->
                         <li class="nav-item"><a class="nav-link" href="login">Login</a></li>
                     </ul>
