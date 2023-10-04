@@ -49,7 +49,9 @@ $this->layout = 'admin';
                 <div class="form-group">
                     <?= $this->Form->control('user_emp_role', [
                         'class' => 'form-control',
-                        'label' => 'User Employee Role',
+                        'label' => 'User Role',
+                        'type' => 'select',
+                        'options' => ['LowVolumeCustomer','HighVolumeCustomer', 'Employee_Type1', 'Employee_Type2'],
                     ]) ?>
                 </div>
                 <div class="form-group">
