@@ -3,8 +3,10 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\User $user
  */
+use Cake\I18n\Time;
 $this->layout = 'admin';
 $this->myRandomNumber = random_int(1,999999999999999999);
+$this->now = Time::now();
 ?>
 <div class="row">
     <aside class="column">
@@ -63,6 +65,7 @@ $this->myRandomNumber = random_int(1,999999999999999999);
                     <?= $this->Form->control('nonce_expiry', [
                         'class' => 'form-control',
                         'label' => 'Nonce Expiry',
+                        'default' => $this->now->addDays(365),
                     ]) ?>
                 </div>
             </fieldset>
