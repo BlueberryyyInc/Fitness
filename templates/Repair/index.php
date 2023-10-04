@@ -37,10 +37,8 @@ the products that they have purchased with us in need of repair via the enquiry 
 <!-- Contact-->
 <section class="page-section" id="repair">
     <div class="container">
-        <!--TODO create information page-->
         </div>
         <br>
-
     <div class="text-center">
         <h2 class="section-heading text-uppercase">Repairs</h2>
     </div>
@@ -83,47 +81,42 @@ the products that they have purchased with us in need of repair via the enquiry 
             <!-- The popup form -->
             <div class="popup" id="popup">
                 <h2 class="display-2 text-center">Repair Enquiry Form</h2>
-
-                <form id="contactForm" action="mailto:damien@superiorfitness.com" method="post" enctype="text/plain">
-                    <div class="row align-items-stretch mb-5">
-                        <div>
-                            <div class="form-group">
-                                <label for="name">Full Name</label>
-                                <input class="form-control" id="name" name="Name" type="text" placeholder="Enter Full Name" required />
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input class="form-control" id="email" name="Email" type="email" placeholder="Enter Preferred Contact Email" required />
-                            </div>
-                            <div class="form-group mb-md-0">
-                                <label for="phone">Phone</label>
-                                <input class="form-control" id="phone" name="Phone" type="tel" placeholder="Enter Phone" required />
-                            </div>
-                            <!--<div class="form-group">
-                                <label for="order">Purchase Order Number</label>
-                                <input class="form-control" id="order" name="Order" type="text" placeholder="Enter Order Number" required />
-                            </div>-->
-                            <!--<div class="form-group">
-                                <label for="order">Product Number</label>
-
-                                <input class="form-control" id="order" name="Order" type="text" placeholder="Enter Product Number" required />
-                            </div>-->
-                            <div class="form-group">
-                                <label for="message">Description</label>
-                                <textarea class="form-control" id="message" name="Message" rows="4" placeholder="Please describe your problem" required></textarea>
-                            </div>
+                <?= $this->Form->create(null, ['url' => ['controller' => 'Repair', 'action' => 'send']]) ?>
+                <div class="row align-items-stretch mb-5">
+                    <div>
+                        <div class="form-group">
+                            <?= $this->Form->control('name', ['class' => 'form-control', 'type' => 'string', 'required' => true]) ?>
+                        </div>
+                        <div class="form-group">
+                            <?= $this->Form->control('email', ['class' => 'form-control', 'type' => 'email','required' => true]) ?>
+                        </div>
+                        <div class="form-group mb-md-0">
+                            <?= $this->Form->control('phone', ['class' => 'form-control', 'type' => 'tel', 'required' => true]) ?>
+                        </div>
+                        <div class="form-group">
+                            <?= $this->Form->control('productNumber', ['class' => 'form-control', 'type' => 'string','required' => false]) ?>
+                        </div>
+                        <div class="form-group">
+                            <?= $this->Form->control('order', ['class' => 'form-control', 'type' => 'string', 'required' => false]) ?>
+                        </div>
+                        <div class="form-group">
+                            <?= $this->Form->control('message', ['class' => 'form-control', 'type' => 'text', 'rows' => '4', 'required' => true]) ?>
                         </div>
                     </div>
-                    <!-- Submit Button -->
                     <div class="text-center">
-                        <!--TODO if enquiry submit is successful, echo feedback "We'll get back to you soon!"-->
-                        <button class="btn btn-primary btn-xl text-uppercase" id="submit" name="submit" type="submit" value="Send">Submit Enquiry</button>
-                        <button class="btn btn-primary btn-xl text-uppercase" id="close" name="close" onclick="closePopup()">Close</button>
+
+                        <?= $this->Form->button('Send Message', ['class' => 'btn btn-primary btn-xl text-uppercase', 'type' => 'submit', 'name' => 'submit', 'value' => 'Send']) ?>
+                        <?= $this->Form->button('Close', ['class' => 'btn btn-primary btn-xl text-uppercase', 'type' => 'button', 'name' => 'close', 'onclick' => 'closePopup()']) ?>
+                        <?= $this->Form->end() ?>
                     </div>
-                </form>
 
 
+                </div>
             </div>
+            <!-- Submit Button -->
+
+
+        </div>
 
             <script>
                 // Function to open the popup form

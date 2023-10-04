@@ -11,6 +11,12 @@ class ContactController extends AppController{
         parent::beforeFilter($event);
         $this->Authentication->addUnauthenticatedActions(['index', 'send']);
     }
+
+    public function initialize(): void
+    {
+        parent::initialize();
+        $this->Authentication->allowUnauthenticated(['index','products','repair','about']);
+    }
     public function index(){
         $this->layout='mylayout';
 
@@ -27,17 +33,6 @@ class ContactController extends AppController{
 
     public function send() {
         if($this->request->is('post')) {
-            // Configure the email transport
-//            TransportFactory::setConfig('zoho', [
-//                'className' => 'Smtp',
-//                'host' => 'smtp.zoho.com.au',
-//                'port' => 465,
-//                'username' => 'superiorfitness@zohomail.com.au',
-//                'password' => 'numerator-quit-upon',
-//                'client' => null,
-//                'tls' => true,
-//            ]);
-
             $name = $this->request->getData('name');
             $email = $this->request->getData('email');
             $phone = $this->request->getData('phone');
@@ -54,7 +49,7 @@ class ContactController extends AppController{
                 ])
                 ->setTransport('default')
                 ->setFrom(['superiorfitness@zohomail.com.au' => 'Superior Fitness Contact Enquiry'])
-                ->setTo('mackenziefletcher@hotmail.com')
+                ->setTo('superiorfitness@zohomail.com.au')
                 ->setEmailFormat('html')
                 ->setSubject('New Contact Enquiry')
                 ->viewBuilder()
