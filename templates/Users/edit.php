@@ -52,6 +52,7 @@ $this->layout = 'admin';
                         'label' => 'User Role',
                         'type' => 'select',
                         'options' => ['LowVolumeCustomer','HighVolumeCustomer', 'Employee_Type1', 'Employee_Type2'],
+                        'empty' => false,
                     ]) ?>
                 </div>
                 <div class="form-group">
@@ -64,6 +65,7 @@ $this->layout = 'admin';
                     <?= $this->Form->control('nonce', [
                         'class' => 'form-control',
                         'label' => 'Nonce',
+                        'default' => 2929292,
                     ]) ?>
                 </div>
                 <div class="form-group">
