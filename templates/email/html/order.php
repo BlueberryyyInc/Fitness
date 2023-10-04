@@ -25,11 +25,13 @@
         <div class="form-group">
             <strong>Postcode:</strong> <?= $postcode; ?>
         </div>
+        <div class="form-group">
+            <strong>State:</strong> <?= $country; ?>
+        </div>
     </div>
     <div class="col-md-6">
         <div class="form-group form-group-textarea mb-md-0">
             <strong>Products:</strong><br>
-            <p>List of Products</p>
             <?= $product; ?>
         </div>
     </div>

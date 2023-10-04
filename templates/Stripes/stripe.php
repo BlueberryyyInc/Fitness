@@ -71,7 +71,7 @@
                     <div class='form-row row'>
                         <div class='col-xs-6 form-group required'>
                             <label class='control-label'>State</label>
-                            <select class="form-control" name="state" required>
+                            <select class="form-control" name="state" id="state" required>
                                 <option value="ACT">Australian Capital Territory</option>
                                 <option value="NSW">New South Wales</option>
                                 <option value="NT ">Northern Territory</option>
@@ -84,7 +84,7 @@
                         </div>
                         <div class='col-xs-6 form-group required'>
                             <label class='control-label'>Postcode</label>
-                            <input class='form-control' size='4' minlength="4" maxlength="4" placeholder="Enter Australian postcode" type='text' name='state' required>
+                            <input class='form-control' size='4' minlength="4" maxlength="4" placeholder="Enter Australian postcode" type='text' name='postcode' required>
                         </div>
                     </div>
 
