@@ -40,6 +40,38 @@ the products that they have purchased with us in need of repair via the enquiry 
         <!--TODO create information page-->
         </div>
         <br>
+
+    <div class="text-center">
+        <h2 class="section-heading text-uppercase">Repairs</h2>
+    </div>
+    <div class="row">
+        <div id="business-img" class="col-4">
+            <!--                <img class="img-fluid" src="assets/img/barbell.jpg" alt="Barbell Image" height="300" width="300"/>-->
+        </div>
+        <div id="business-info" class="col-6">
+            <div class="row">
+                <div class="col-12"><h1><?= $this->ContentBlock->text('contact-name'); ?></h1></div></div>
+            <div class="row">
+                <div class="col-1"><p>Address:</p></div>
+                <div class="col-11"><p><?= $this->ContentBlock->text('contact-address'); ?></p></div>
+            </div>
+            <div class="row">
+                <div class="col-1"><p>Phone</p></div>
+                <div class="col-11"><p><?= $this->ContentBlock->text('contact-number'); ?></p></div>
+            </div>
+            <div class="row">
+                <div class="col-1"><p>Email:</p></div>
+                <div class="col-11"><p><?= $this->ContentBlock->text('contact-email'); ?></p></div>
+            </div>
+            <div class="row">
+                <div class="col-1"><p>Repairs:</p></div>
+                <div class="col-11"><p>Use the button below to fill out a repair enquiry form,<br>or simply send an email directly to our above address. <br> Be sure to include the product name and the issue.</p></div>
+            </div>
+
+        </div>
+    </div>
+
+
         <div id="enquiry">
             <div class="text-center">
                 <button id="enquiryButton" class="btn btn-primary btn-xl text-uppercase">Repair Enquiry</button>
@@ -51,6 +83,7 @@ the products that they have purchased with us in need of repair via the enquiry 
             <!-- The popup form -->
             <div class="popup" id="popup">
                 <h2 class="display-2 text-center">Repair Enquiry Form</h2>
+
                 <form id="contactForm" action="mailto:damien@superiorfitness.com" method="post" enctype="text/plain">
                     <div class="row align-items-stretch mb-5">
                         <div>
@@ -66,15 +99,15 @@ the products that they have purchased with us in need of repair via the enquiry 
                                 <label for="phone">Phone</label>
                                 <input class="form-control" id="phone" name="Phone" type="tel" placeholder="Enter Phone" required />
                             </div>
-                            <div class="form-group">
+                            <!--<div class="form-group">
                                 <label for="order">Purchase Order Number</label>
                                 <input class="form-control" id="order" name="Order" type="text" placeholder="Enter Order Number" required />
-                            </div>
-                            <div class="form-group">
+                            </div>-->
+                            <!--<div class="form-group">
                                 <label for="order">Product Number</label>
-                                <!--TODO make this a product list that loads from DB-->
+
                                 <input class="form-control" id="order" name="Order" type="text" placeholder="Enter Product Number" required />
-                            </div>
+                            </div>-->
                             <div class="form-group">
                                 <label for="message">Description</label>
                                 <textarea class="form-control" id="message" name="Message" rows="4" placeholder="Please describe your problem" required></textarea>
