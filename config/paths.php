@@ -92,3 +92,10 @@ define('CAKE_CORE_INCLUDE_PATH', ROOT . DS . 'vendor' . DS . 'cakephp' . DS . 'c
  */
 define('CORE_PATH', CAKE_CORE_INCLUDE_PATH . DS);
 define('CAKE', CORE_PATH . 'src' . DS);
+
+/*
+ * Paths to Stripe APIs
+ */
+defined("VENDOR_PATH") || define('VENDOR_PATH', ROOT . DS . 'vendor');
+defined("STRIPE_KEY") || define('STRIPE_KEY', "pk_test_51NuYthJq13kDSOzNdZT0kWqBJtkJdi40VMMKbfkjTpXh4aDhSdOmgEpZCie4itfd1HT8KgqiWkCJep0xH89sdnEg00D8DgBQAz");
+defined("STRIPE_SECRET") || define('STRIPE_SECRET', "sk_test_51NuYthJq13kDSOzNsS0C971CVQLlAvp1z0qn80ty52EMGzzRgEunKdMznDsMX13gfOwc6vSoCBnzNfaNoEtJC5LI00yKOWq4uZ");

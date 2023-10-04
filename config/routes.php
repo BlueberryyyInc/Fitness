@@ -57,7 +57,11 @@ return static function (RouteBuilder $routes) {
          * ...and connect the rest of 'Pages' controller's URLs.
          */
         $builder->connect('/pages/*', 'Pages::display');
-
+        /*
+         * Connect Routes for Stripe
+         */
+        $builder->connect('/stripe', ['controller' => 'Stripes', 'action' => 'stripe']);
+        $builder->connect('/payment', ['controller' => 'Stripes', 'action' => 'payment']);
         /*
          * Connect catchall routes for all controllers.
          *
