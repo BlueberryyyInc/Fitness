@@ -30,6 +30,10 @@ echo $this->Html->script("/js/datatables-simple-demo.js",['block'=>true]);
                             <th><?=h('Product Name')?></th>
                             <th><?=h('Product Cost')?></th>
                             <th><?=h('Inventory Amount')?></th>
+                            <th><?=h('Product Description')?></th>
+                            <th><?=h('Product Brand')?></th>
+                            <th><?=h('Product Category')?></th>
+                            <th><?=h('Product Image Path')?></th>
                             <th> <?=h('Actions')?></th>
                         </tr>
                     </thead>
@@ -39,6 +43,10 @@ echo $this->Html->script("/js/datatables-simple-demo.js",['block'=>true]);
                             <th><?=h('Product Name')?></th>
                             <th><?=h('Product Cost')?></th>
                             <th><?=h('Inventory Amount')?></th>
+                            <th><?=h('Product Description')?></th>
+                            <th><?=h('Product Brand')?></th>
+                            <th><?=h('Product Category')?></th>
+                            <th><?=h('Product Image Path')?></th>
                             <th> <?=h('Actions')?></th>
                         </tr>
                     </tfoot>
@@ -49,6 +57,10 @@ echo $this->Html->script("/js/datatables-simple-demo.js",['block'=>true]);
                             <td><?= h($product->product_name) ?></td>
                             <td><?= $this->Number->format($product->product_cost) ?></td>
                             <td><?= $this->Number->format($product->inventory_amount) ?></td>
+                            <td><?= h($product->product_description) ?></td>
+                            <td><?= h($product->product_brand) ?></td>
+                            <td><?= h($product->product_category) ?></td>
+                            <td><?= h($product->product_image_path) ?></td>
                             <td class="actions">
                                 <?= $this->Html->link(
                                     '<i class="fa-regular fa-eye"></i> ' . __('View'),

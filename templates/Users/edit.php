@@ -49,7 +49,10 @@ $this->layout = 'admin';
                 <div class="form-group">
                     <?= $this->Form->control('user_emp_role', [
                         'class' => 'form-control',
-                        'label' => 'User Employee Role',
+                        'label' => 'User Role',
+                        'type' => 'select',
+                        'options' => ['lvCust' => 'Low Volume Customer','hvCust' => 'High Volume Customer', '1emp' => 'Employee Type 1', '2emp' => 'Employee Type 2'],
+                        'empty' => false,
                     ]) ?>
                 </div>
                 <div class="form-group">
@@ -58,13 +61,13 @@ $this->layout = 'admin';
                         'label' => 'Password',
                     ]) ?>
                 </div>
-                <div class="form-group">
+                <div hidden class="form-group">
                     <?= $this->Form->control('nonce', [
                         'class' => 'form-control',
                         'label' => 'Nonce',
                     ]) ?>
                 </div>
-                <div class="form-group">
+                <div hidden class="form-group">
                     <?= $this->Form->control('nonce_expiry', [
                         'class' => 'form-control',
                         'label' => 'Nonce Expiry',

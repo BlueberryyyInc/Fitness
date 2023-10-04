@@ -30,6 +30,10 @@ class Product extends Entity
         'product_name' => true,
         'product_cost' => true,
         'inventory_amount' => true,
+        'product_description' => true,
+        'product_category' => true,
+        'product_brand' => true,
+        'product_image_path' => true,
         'orders' => true,
     ];
 }

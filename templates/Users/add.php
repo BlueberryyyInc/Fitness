@@ -3,7 +3,10 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\User $user
  */
+use Cake\I18n\Time;
 $this->layout = 'admin';
+$this->myRandomNumber = random_int(1,2147483647);
+$this->now = Time::now();
 ?>
 <div class="row">
     <aside class="column">
@@ -39,7 +42,10 @@ $this->layout = 'admin';
                 <div class="form-group">
                     <?= $this->Form->control('user_emp_role', [
                         'class' => 'form-control',
-                        'label' => 'User Employee Role',
+                        'label' => 'User Role',
+                        'type' => 'select',
+                        'options' => ['lvCust' => 'Low Volume Customer','hvCust' => 'High Volume Customer', '1emp' => 'Employee Type 1', '2emp' => 'Employee Type 2'],
+                        'empty' => false,
                     ]) ?>
                 </div>
                 <div class="form-group">
@@ -48,16 +54,18 @@ $this->layout = 'admin';
                         'label' => 'Password',
                     ]) ?>
                 </div>
-                <div class="form-group">
+                <div hidden class="form-group">
                     <?= $this->Form->control('nonce', [
                         'class' => 'form-control',
                         'label' => 'Nonce',
+                        'default' => $this->myRandomNumber,
                     ]) ?>
                 </div>
-                <div class="form-group">
+                <div hidden class="form-group">
                     <?= $this->Form->control('nonce_expiry', [
                         'class' => 'form-control',
                         'label' => 'Nonce Expiry',
+                        'default' => $this->now->addDays(365),
                     ]) ?>
                 </div>
             </fieldset>
