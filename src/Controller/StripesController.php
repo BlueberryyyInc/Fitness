@@ -18,38 +18,59 @@ class StripesController extends AppController
 
     public function payment()
     {
-        //Handle Payment
-        require_once VENDOR_PATH. '/stripe/stripe-php/init.php';
+        // Handle Payment
+        require_once VENDOR_PATH . '/stripe/stripe-php/init.php';
 
         Stripe\Stripe::setApiKey(STRIPE_SECRET);
-        $stripe = Stripe\Charge::create ([
-            "amount" => 70 * 100,
-            "currency" => "usd",
+
+        // Create a Stripe customer and store the customer ID
+        $customer = \Stripe\Customer::create(array(
             "source" => $_REQUEST["stripeToken"],
-            "description" => "Test payment via Stripe From onlinewebtutorblog.com"
+            "description" => "Basic customer"
+        ));
+
+        // Use the customer ID to create a charge
+        $stripe = Stripe\Charge::create([
+            "amount" => 30 * 100,
+            "currency" => "aud",
+            "customer" => $customer->id, // Use the customer ID here
+            "description" => "10kg Barbell"
         ]);
+
+
+        //Get Data
+        $firstName = $this->request->getData('firstName');
+        $lastName = $this->request->getData('lastName');
+        $phone = $this->request->getData('phone');
+        $email = $this->request->getData('email');
+        $address = $this->request->getData('address');
+        $address2 = $this->request->getData('address2');
+        $state = $this->request->getData('state');
+        $postcode = $this->request->getData('postcode');
+
 
         //Handle Email
         $mailer = new Mailer('default');
         $mailer
             ->setViewVars([
-                'firstName' => $_POST['firstName'],
-                'lastName' => $_POST['lastName'],
-                'phone' => $_POST['phone'],
-                'email' => $_POST['email'],
-                'address' => $_POST['address'],
-                'address2' => $_POST['address2'],
-                'country' => $_POST['country'],
-                'state' => $_POST['state'],
-                'postcode' => $_POST['postcode'],
+                'firstName' => $firstName,
+                'lastName' => $lastName,
+                'phone' => $phone,
+                'email' => $email,
+                'address' => $address,
+                'address2' => $address2,
+                'country' => 'Australia',
+                'state' => $state,
+                'postcode' => $postcode,
+                'product' => '10Kg Barbell',
             ])
-            ->setTransport('smtp')
-            ->setFrom(['superiorfitness[at]zohomail.com.au' => 'Superior Fitness Contact Enquiry'])
+            ->setTransport('default')
+            ->setFrom(['superiorfitness@zohomail.com.au' => 'Superior Fitness Purchase'])
             ->setTo('superiorfitness@zohomail.com.au')
             ->setEmailFormat('html')
-            ->setSubject('New Contact Enquiry')
+            ->setSubject('New Purchase')
             ->viewBuilder()
-            ->setTemplate('contact');
+            ->setTemplate('order');
         $mailer->deliver();
 
         // after successfull payment, you can store payment related information into your database

@@ -10,6 +10,9 @@
             <h2 class="section-heading text-uppercase">Catalogue</h2>
             <h2 class="section-subheading">For purchase enquiries, you can contact us <a href="Contact">here.</a></h2>
         </div>
+        <div>
+            <a href="Stripes/stripe" class="btn btn-xl btn-primary">Buy 10kg Barbell Now</a>
+        </div>
         <div class="row">
             <?php foreach ($products as $product): ?>
                 <div class="col-lg-4 col-sm-6 mb-4">

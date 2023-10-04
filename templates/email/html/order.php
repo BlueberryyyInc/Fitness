@@ -30,6 +30,7 @@
         <div class="form-group form-group-textarea mb-md-0">
             <strong>Products:</strong><br>
             <p>List of Products</p>
+            <?= $product; ?>
         </div>
     </div>
 </div>
