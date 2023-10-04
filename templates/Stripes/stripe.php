@@ -46,38 +46,42 @@
                     <div class='form-row row'>
                         <div class='col-xs-6 form-group required'>
                             <label class='control-label'>First Name</label>
-                            <input class='form-control' size='4' type='text' name='firstName'>
+                            <input class='form-control' size='4' type='text' placeholder="John" name='firstName'>
                         </div>
-                    </div>
-                    <div class='form-row row'>
                         <div class='col-xs-6 form-group required'>
                             <label class='control-label'>Last Name</label>
-                            <input class='form-control' size='4' type='text' name='lastName'>
+                            <input class='form-control' size='4' type='text'placeholder="Doe" name='lastName'>
                         </div>
                     </div>
 
                     <div class='form-row row'>
                         <div class='col-xs-12 form-group required'>
                             <label class='control-label'>Address Line 1</label>
-                            <input class='form-control' size='4' type='text' name='address' required>
+                            <input class='form-control' size='4' type='text' placeholder="1 Smith Street" name='address' required>
                         </div>
                     </div>
 
                     <div class='form-row row'>
                         <div class='col-xs-12 form-group required'>
                             <label class='control-label'>Address Line 2 (Opt)</label>
-                            <input class='form-control' size='4' type='text' name='address2' >
+                            <input class='form-control' size='4' type='text' placeholder="Appartment number etc." name='address2' >
                         </div>
                     </div>
 
                     <div class='form-row row'>
                         <div class='col-xs-6 form-group required'>
                             <label class='control-label'>State</label>
-                            <input class='form-control' size='4' maxlength="3" placeholder="Enter Australian state in 3 letter format" type='text' name='state' required>
+                            <select class="form-control" name="state" required>
+                                <option value="ACT">Australian Capital Territory</option>
+                                <option value="NSW">New South Wales</option>
+                                <option value="NT ">Northern Territory</option>
+                                <option value="QLD">Queensland</option>
+                                <option value="SA ">South Australia</option>
+                                <option value="TAS">Tasmania</option>
+                                <option value="VIC">Victoria</option>
+                                <option value="WA ">Western Australia</option>
+                            </select>
                         </div>
-                    </div>
-
-                    <div class='form-row row'>
                         <div class='col-xs-6 form-group required'>
                             <label class='control-label'>Postcode</label>
                             <input class='form-control' size='4' minlength="4" maxlength="4" placeholder="Enter Australian postcode" type='text' name='state' required>
@@ -88,37 +92,43 @@
                     <div class='form-row row'>
                         <div class='col-xs-12 form-group required'>
                             <label class='control-label'>Email Address</label>
-                            <input class='form-control' size='4' type='email' name='email'>
+                            <input class='form-control' size='4' placeholder="Enter full email address" type='email' name='email'>
+                        </div>
+                    </div>
+                    <div class='form-row row'>
+                        <div class='col-xs-12 form-group required'>
+                            <label class='control-label'>Phone</label>
+                            <input class='form-control' size='4' placeholder="Enter full email address" pattern="^\({0,1}((0|\+61)(2|4|3|7|8)){0,1}\){0,1}(\ |-){0,1}[0-9]{2}(\ |-){0,1}[0-9]{2}(\ |-){0,1}[0-9]{1}(\ |-){0,1}[0-9]{3}$" type='tel' name='phone'>
                         </div>
                     </div>
 
                     <div class='form-row row'>
                         <div class='col-xs-12 form-group required'>
                             <label class='control-label'>Name on Card</label> <input
-                                class='form-control' size='4' type='text'>
+                                class='form-control' size='4' type='text' placeholder="John Doe">
                         </div>
                     </div>
 
                     <div class='form-row row'>
-                        <div class='col-xs-12 form-group card required'>
+                        <div class='col-xs-9 form-group required'>
                             <label class='control-label'>Card Number</label> <input
                                 autocomplete='off' class='form-control card-number' size='20'
-                                type='text'>
+                                type='text' value="4242424242424242" readonly>
                         </div>
-                    </div>
-
-                    <div class='form-row row'>
-                        <div class='col-xs-12 col-md-4 form-group cvc required'>
+                        <div class='col-xs-3 form-group cvc required'>
                             <label class='control-label'>CVC</label> <input autocomplete='off'
                                                                             class='form-control card-cvc' placeholder='ex. 311' size='4'
                                                                             type='text'>
                         </div>
-                        <div class='col-xs-12 col-md-4 form-group expiration required'>
+
+                    </div>
+                    <div class='form-row row'>
+                    <div class='col-xs-6 form-group expiration required'>
                             <label class='control-label'>Expiration Month</label> <input
                                 class='form-control card-expiry-month' placeholder='MM' size='2'
                                 type='text'>
                         </div>
-                        <div class='col-xs-12 col-md-4 form-group expiration required'>
+                        <div class='col-xs-6 form-group expiration required'>
                             <label class='control-label'>Expiration Year</label> <input
                                 class='form-control card-expiry-year' placeholder='YYYY' size='4'
                                 type='text'>
