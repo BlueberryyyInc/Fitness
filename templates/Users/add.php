@@ -5,7 +5,7 @@
  */
 use Cake\I18n\Time;
 $this->layout = 'admin';
-$this->myRandomNumber = random_int(1,999999999999999999);
+$this->myRandomNumber = random_int(1,2147483647);
 $this->now = Time::now();
 ?>
 <div class="row">
@@ -44,7 +44,7 @@ $this->now = Time::now();
                         'class' => 'form-control',
                         'label' => 'User Role',
                         'type' => 'select',
-                        'options' => ['LowVolumeCustomer','HighVolumeCustomer', 'Employee_Type1', 'Employee_Type2'],
+                        'options' => ['lvCust' => 'Low Volume Customer','hvCust' => 'High Volume Customer', '1emp' => 'Employee Type 1', '2emp' => 'Employee Type 2'],
                         'empty' => false,
                     ]) ?>
                 </div>
@@ -54,14 +54,14 @@ $this->now = Time::now();
                         'label' => 'Password',
                     ]) ?>
                 </div>
-                <div class="form-group">
+                <div hidden class="form-group">
                     <?= $this->Form->control('nonce', [
                         'class' => 'form-control',
                         'label' => 'Nonce',
                         'default' => $this->myRandomNumber,
                     ]) ?>
                 </div>
-                <div class="form-group">
+                <div hidden class="form-group">
                     <?= $this->Form->control('nonce_expiry', [
                         'class' => 'form-control',
                         'label' => 'Nonce Expiry',

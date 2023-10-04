@@ -51,7 +51,7 @@ $this->layout = 'admin';
                         'class' => 'form-control',
                         'label' => 'User Role',
                         'type' => 'select',
-                        'options' => ['LowVolumeCustomer','HighVolumeCustomer', 'Employee_Type1', 'Employee_Type2'],
+                        'options' => ['lvCust' => 'Low Volume Customer','hvCust' => 'High Volume Customer', '1emp' => 'Employee Type 1', '2emp' => 'Employee Type 2'],
                         'empty' => false,
                     ]) ?>
                 </div>
@@ -61,14 +61,13 @@ $this->layout = 'admin';
                         'label' => 'Password',
                     ]) ?>
                 </div>
-                <div class="form-group">
+                <div hidden class="form-group">
                     <?= $this->Form->control('nonce', [
                         'class' => 'form-control',
                         'label' => 'Nonce',
-                        'default' => 2929292,
                     ]) ?>
                 </div>
-                <div class="form-group">
+                <div hidden class="form-group">
                     <?= $this->Form->control('nonce_expiry', [
                         'class' => 'form-control',
                         'label' => 'Nonce Expiry',
