@@ -1,5 +1,5 @@
 <!-- Contact Form Email Template -->
-<h2>Contact Form Submission</h2>
+<h2>Repair Form Submission</h2>
 
 <div class="row align-items-stretch mb-5">
     <div class="col-md-6">
@@ -11,6 +11,12 @@
         </div>
         <div class="form-group">
             <strong>Phone:</strong> <?= $phone; ?>
+        </div>
+        <div class="form-group">
+            <strong>Order:</strong> <?= $order; ?>
+        </div>
+        <div class="form-group">
+            <strong>Product Number:</strong> <?= $productNumber; ?>
         </div>
     </div>
     <div class="col-md-6">
