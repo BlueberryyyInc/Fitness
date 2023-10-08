@@ -15,7 +15,7 @@ class ProductsController extends AppController
     public function initialize(): void
     {
         parent::initialize();
-        $this->Authentication->allowUnauthenticated(['index','about','products','contact','home']);
+        $this->Authentication->allowUnauthenticated(['index','about','products','contact','home','carts']);
     }
     /**
      * Index method
@@ -25,7 +25,7 @@ class ProductsController extends AppController
     public function index()
     {
         $products = $this->paginate($this->Products);
-       
+
         $this->set(compact('products'));
     }
 

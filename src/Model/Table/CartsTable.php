@@ -11,9 +11,7 @@ class CartsTable extends Table
         $this->setTable('carts');
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
-        $this->addBehavior('timestamp');
-        $this->belongsTo('users');
-        $this->belongsTo('products', [
+        $this->belongsTo('Products', [
             'foreignKey' => 'product_id',
         ]);
     }
