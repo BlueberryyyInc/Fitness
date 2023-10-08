@@ -62,7 +62,7 @@
                             <?= $this->Form->control('subject', ['class' => 'form-control', 'required' => true, 'maxLength' => 40]) ?>
                         </div>
                         <div class="form-group">
-                            <?= $this->Form->control('message', ['class' => 'form-control', 'rows' => '4', 'required' => true, 'maxLength' => 400]) ?>
+                            <?= $this->Form->control('message', ['class' => 'form-control', 'rows' => '4', 'required' => true, 'maxLength' => 401]) ?>
                         </div>
                     </div>
                     <div class="text-center">

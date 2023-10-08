@@ -94,7 +94,7 @@ the products that they have purchased with us in need of repair via the enquiry 
                             <?= $this->Form->control('phone', ['class' => 'form-control', 'type' => 'number', 'required' => true, 'max' => 9999999999, 'pattern' => '[0-9]*' ]) ?>
                         </div>
                         <div class="form-group">
-                            <?= $this->Form->control('productNumber', ['class' => 'form-control', 'type' => 'number','required' => false, 'maxlength' => 9999999999]) ?>
+                            <?= $this->Form->control('productNumber', ['class' => 'form-control', 'type' => 'number','required' => false, 'maxlength' => 999999999]) ?>
                         </div>
                         <div class="form-group">
                             <?= $this->Form->control('order', ['class' => 'form-control', 'type' => 'string', 'required' => false, 'maxLength' => 20]) ?>
