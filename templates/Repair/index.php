@@ -85,7 +85,7 @@ the products that they have purchased with us in need of repair via the enquiry 
                 <div class="row align-items-stretch mb-5">
                     <div>
                         <div class="form-group">
-                            <?= $this->Form->control('name', ['class' => 'form-control', 'type' => 'string', 'required' => true, 'maxLength' => 20]) ?>
+                            <?= $this->Form->control('name', ['class' => 'form-control', 'type' => 'string', 'required' => true, 'maxLength' => 40]) ?>
                         </div>
                         <div class="form-group">
                             <?= $this->Form->control('email', ['class' => 'form-control', 'type' => 'email','required' => true, 'maxLength' => 60]) ?>
