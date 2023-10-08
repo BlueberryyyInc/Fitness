@@ -8,7 +8,7 @@
         public function initialize(): void
         {
             parent::initialize();
-            $this->Authentication->allowUnauthenticated(['index','products','contact','about']);
+            $this->Authentication->allowUnauthenticated(['index','products','contact','about','carts']);
         }
         public function index(){
              $this->layout='mylayout';
