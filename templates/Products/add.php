@@ -18,7 +18,7 @@ echo $this->Html->script("https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/b
     <div class="column-responsive column-80">
         <div class="products form content">
             <?= $this->Form->create($product) ?>
-            <?= $this->Form->create($product, ['class' => 'form']) ?>
+            <?= $this->Form->create($product, ['type' => 'file', 'class' => 'form'])?>
             <fieldset>
                 <legend><?= __('Add Product') ?></legend>
                 <div class="form-group">
@@ -59,8 +59,10 @@ echo $this->Html->script("https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/b
                 </div>
                 <div class="form-group">
                     <?= $this->Form->control('product_image_path', [
+                        'type'  => 'file',
                         'class' => 'form-control',
-                        'label' => 'Product Image Path',
+                        'label' => 'Product Image',
+                        'required' => true
                     ]) ?>
                 </div>
                 <div class="form-group">
