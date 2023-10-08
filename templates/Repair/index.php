@@ -85,22 +85,22 @@ the products that they have purchased with us in need of repair via the enquiry 
                 <div class="row align-items-stretch mb-5">
                     <div>
                         <div class="form-group">
-                            <?= $this->Form->control('name', ['class' => 'form-control', 'type' => 'string', 'required' => true]) ?>
+                            <?= $this->Form->control('name', ['class' => 'form-control', 'type' => 'string', 'required' => true, 'maxLength' => 20]) ?>
                         </div>
                         <div class="form-group">
-                            <?= $this->Form->control('email', ['class' => 'form-control', 'type' => 'email','required' => true]) ?>
+                            <?= $this->Form->control('email', ['class' => 'form-control', 'type' => 'email','required' => true, 'maxLength' => 60]) ?>
                         </div>
                         <div class="form-group mb-md-0">
-                            <?= $this->Form->control('phone', ['class' => 'form-control', 'type' => 'tel', 'required' => true]) ?>
+                            <?= $this->Form->control('phone', ['class' => 'form-control', 'type' => 'number', 'required' => true, 'max' => 9999999999, 'pattern' => '[0-9]*' ]) ?>
                         </div>
                         <div class="form-group">
-                            <?= $this->Form->control('productNumber', ['class' => 'form-control', 'type' => 'string','required' => false]) ?>
+                            <?= $this->Form->control('productNumber', ['class' => 'form-control', 'type' => 'number','required' => false, 'maxlength' => 9999999999]) ?>
                         </div>
                         <div class="form-group">
-                            <?= $this->Form->control('order', ['class' => 'form-control', 'type' => 'string', 'required' => false]) ?>
+                            <?= $this->Form->control('order', ['class' => 'form-control', 'type' => 'string', 'required' => false, 'maxLength' => 20]) ?>
                         </div>
                         <div class="form-group">
-                            <?= $this->Form->control('message', ['class' => 'form-control', 'type' => 'text', 'rows' => '4', 'required' => true]) ?>
+                            <?= $this->Form->control('message', ['class' => 'form-control', 'type' => 'text', 'rows' => '4', 'required' => true, 'maxLength' => 300]) ?>
                         </div>
                     </div>
                     <div class="text-center">
