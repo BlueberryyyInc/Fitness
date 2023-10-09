@@ -62,7 +62,7 @@ $action = $this->request->getParam('action');
                         <li class="nav-item"><a class="nav-link" href=<?= $this->Url->buildFromPath('Repair::index');?>>Repairs</a></li>
                         <li class="nav-item"><a class="nav-link" href=<?= $this->Url->buildFromPath('Carts::index');?>>My Cart</a></li>
                         <!--TODO make this link to admin dashboard login-->
-                        <li class="nav-item"><a class="nav-link" href="login">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href=<?= $this->Url->buildFromPath('Users::login');?>>Login</a></li>
                     </ul>
                 </div>
             </div>
