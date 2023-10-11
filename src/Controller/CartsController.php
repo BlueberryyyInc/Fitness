@@ -18,15 +18,19 @@ class CartsController extends AppController
 
     public function index()
     {
-        $this->layout='mylayout';
+
+
         $carts = $this->Carts->find('all', [
             'contain' => ['Products']
-        ]);
+        ])->toArray();
+
+            $total = 0;
         // calculate total
-        $total = 0;
-        foreach ($carts as $cart) {
-            $total += $cart->product->product_cost * $cart->quantity;
-        }
+       foreach ($carts as $cart) {
+                   $total += $cart->product->product_cost * $cart->quantity;
+               }
+
+
         $this->set(compact('carts', 'total'));
     }
 
@@ -35,6 +39,7 @@ class CartsController extends AppController
      */
     public function add()
     {
+
         $this->request->allowMethod(['ajax', 'post']);
 
         $data = $this->request->getData();
