@@ -26,8 +26,13 @@ class UsersController extends AppController
 
     public function index()
     {
-         $users = $this->paginate($this->Users);
+        $users = $this->paginate($this->Users);
         $this->set(compact('users'));
+    }
+
+    public function dashboard()
+    {
+        
     }
 
     /**
@@ -84,7 +89,7 @@ class UsersController extends AppController
 
             // If the user is valid and not locked out or inactive
             if ($result && $result->isValid()) {
-                $fallbackLocation = ['controller' => 'Users', 'action' => 'index'];
+                $fallbackLocation = ['controller' => 'Users', 'action' => 'dashboard'];
                 $target = $this->Authentication->getLoginRedirect() ?? $fallbackLocation;
 
                 return $this->redirect($target);
