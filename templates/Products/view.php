@@ -65,11 +65,11 @@ $this->Html->script("https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootst
                         </tr>
                         <tr>
                             <th><?= __('Product Category') ?></th>
-                            <td><?= h($product->product_brand) ?></td>
+                            <td><?= h($product->product_category) ?></td>
                         </tr>
                         <tr>
-                            <th><?= __('Product Image Path') ?></th>
-                            <td><?= h($product->product_brand) ?></td>
+                            <th><?= __('Product Image') ?></th>
+                            <td><?= $this->Html->image($product->product_image_path, ['alt' => $product->product_name]) ?></td>
                         </tr>
                     </tbody>
                 </table>
