@@ -3,10 +3,10 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\User $user
  */
-use Cake\I18n\Time;
+use Cake\I18n\FrozenTime;
 $this->layout = 'admin';
 $this->myRandomNumber = random_int(1,2147483647);
-$this->now = Time::now();
+$this->now = FrozenTime::now();
 ?>
 <div class="row">
     <aside class="column">
@@ -54,14 +54,14 @@ $this->now = Time::now();
                         'label' => 'Password',
                     ]) ?>
                 </div>
-                <div hidden class="form-group">
+                <div class="form-group">
                     <?= $this->Form->control('nonce', [
                         'class' => 'form-control',
                         'label' => 'Nonce',
                         'default' => $this->myRandomNumber,
                     ]) ?>
                 </div>
-                <div hidden class="form-group">
+                <div class="form-group">
                     <?= $this->Form->control('nonce_expiry', [
                         'class' => 'form-control',
                         'label' => 'Nonce Expiry',
