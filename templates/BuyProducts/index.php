@@ -106,7 +106,7 @@
         fetch("<?= $this->Url->build(['controller' => 'Carts', 'action' => 'add']); ?>", {
             method: "POST",
             headers: {
-                // 添加 CSRF 令牌到请求标头
+
                 'X-CSRF-Token': csrfToken,
                 'Content-Type': 'application/json'
             },
