@@ -84,7 +84,7 @@
                         </div>
                         <div class='col-xs-6 form-group required'>
                             <label class='control-label'>Postcode</label>
-                            <input class='form-control' size='4' minlength="4" maxlength="4" placeholder="Enter Australian postcode" type='text' name='state' required>
+                            <input class='form-control' size='4' minlength="4" maxlength="4" placeholder="Enter Australian postcode" type='text' name='postcode' required>
                         </div>
                     </div>
 
