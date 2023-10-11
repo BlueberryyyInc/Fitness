@@ -82,7 +82,7 @@ echo $this->Html->script("/js/datatables-simple-demo.js",['block'=>true]);
                                     '<i class="fas fa-trash"></i> ' . __('Delete'),
                                     ['action' => 'delete', $product->id],
                                     [
-                                        'confirm' => __('Are you sure you want to delete # {0}?', $product->id),
+                                        'confirm' => __('Are you sure you want to delete Product ID: {0}? The ID is assigned to Product Name: {1}.', $product->id, $product->product_name),
                                         'escape' => false,
                                         'class' => 'btn btn-danger btn-sm',
                                     ]

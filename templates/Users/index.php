@@ -74,7 +74,7 @@ echo $this->Html->script("/js/datatables-simple-demo.js",['block'=>true]);
                                 '<i class="fas fa-trash"></i> ' . __('Delete'),
                                 ['action' => 'delete', $user->id],
                                 [
-                                    'confirm' => __('Are you sure you want to delete User ID: {0}?', $user->id),
+                                    'confirm' => __('Are you sure you want to delete User ID: {0}? The ID is assigned to User Name: {1}.', $user->id, $user->user_name),
                                     'escape' => false,
                                     'class' => 'btn btn-danger btn-sm',
                                 ]
