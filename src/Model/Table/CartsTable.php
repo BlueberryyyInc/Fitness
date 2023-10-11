@@ -11,7 +11,6 @@ class CartsTable extends Table
         $this->setTable('carts');
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
-      
         $this->belongsTo('Products', [
             'foreignKey' => 'product_id',
         ]);

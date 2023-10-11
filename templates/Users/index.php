@@ -69,20 +69,21 @@ echo $this->Html->script("/js/datatables-simple-demo.js",['block'=>true]);
                                 'class' => 'btn btn-primary btn-sm',
                             ]
                         ) ?>
-                        <?= $this->Form->postLink(
-                            '<i class="fas fa-trash"></i> ' . __('Delete'),
-                            ['action' => 'delete', $user->id],
-                            [
-                                'confirm' => __('Are you sure you want to delete # {0}?', $user->id),
-                                'escape' => false,
-                                'class' => 'btn btn-danger btn-sm',
-                            ]
-                        ) ?>
+                        <?php if ($user->id != 4): ?>
+                            <?= $this->Form->postLink(
+                                '<i class="fas fa-trash"></i> ' . __('Delete'),
+                                ['action' => 'delete', $user->id],
+                                [
+                                    'confirm' => __('Are you sure you want to delete User ID: {0}? The ID is assigned to User Name: {1}.', $user->id, $user->user_name),
+                                    'escape' => false,
+                                    'class' => 'btn btn-danger btn-sm',
+                                ]
+                            ) ?>
+                        <?php endif; ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
     </div>
-
 </div>

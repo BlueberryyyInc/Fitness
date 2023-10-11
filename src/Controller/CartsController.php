@@ -2,7 +2,9 @@
 declare(strict_types=1);
 
 namespace App\Controller;
-
+use Cake\Event\EventInterface;
+use Cake\Http\Response;
+use Cake\Http\ServerRequest;
 /**
  * @property \App\Model\Table\CartsTable $Carts
  */
@@ -11,7 +13,7 @@ class CartsController extends AppController
     public function beforeFilter(\Cake\Event\EventInterface $event)
        {
            parent::beforeFilter($event);
-           $this->Authentication->addUnauthenticatedActions(['updateQuantity','stripe', 'payment','carts','index','about','products','contact','home','add','delete','remove','post']);
+           $this->Authentication->addUnauthenticatedActions(['updateQuantity','stripe', 'payment','carts','index','about','contact','home','add','delete','remove','post']);
        }
 
     public function index()
