@@ -17,7 +17,6 @@ echo $this->Html->script("https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/b
     </aside>
     <div class="column-responsive column-80">
         <div class="products form content">
-            <?= $this->Form->create($product) ?>
             <?= $this->Form->create($product, ['type' => 'file', 'class' => 'form'])?>
             <fieldset>
                 <legend><?= __('Add Product') ?></legend>
