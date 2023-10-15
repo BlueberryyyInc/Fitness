@@ -31,6 +31,13 @@ the products that they have purchased with us in need of repair via the enquiry 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
+
+    <style>
+        p {
+            font-family: sans-serif;
+            font-size: larger;
+        }
+    </style>
 </head>
 <body id="page-top">
 
