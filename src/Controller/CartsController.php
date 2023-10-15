@@ -2,31 +2,35 @@
 declare(strict_types=1);
 
 namespace App\Controller;
-
-
+use Cake\Event\EventInterface;
+use Cake\Http\Response;
+use Cake\Http\ServerRequest;
 /**
  * @property \App\Model\Table\CartsTable $Carts
  */
 class CartsController extends AppController
 {
-    public function initialize(): void
-    {
-        parent::initialize();
-        $this->Authentication->allowUnauthenticated(['index', 'products', 'contact', 'about']);
-    }
+    public function beforeFilter(\Cake\Event\EventInterface $event)
+       {
+           parent::beforeFilter($event);
+           $this->Authentication->addUnauthenticatedActions(['updateQuantity','stripe', 'payment','carts','index','about','contact','home','add','delete','remove','post']);
+       }
 
     public function index()
     {
-        $this->layout='mylayout';
+
+
         $carts = $this->Carts->find('all', [
-            'conditions' => ['user_id' => 4],
-            'contain' => ['products']
-        ]);
+            'contain' => ['Products']
+        ])->toArray();
+
+            $total = 0;
         // calculate total
-        $total = 0;
-        foreach ($carts as $cart) {
-            $total += $cart->product->product_cost * $cart->quantity;
-        }
+       foreach ($carts as $cart) {
+                   $total += $cart->product->product_cost * $cart->quantity;
+               }
+
+
         $this->set(compact('carts', 'total'));
     }
 
@@ -35,25 +39,24 @@ class CartsController extends AppController
      */
     public function add()
     {
+
         $this->request->allowMethod(['ajax', 'post']);
 
         $data = $this->request->getData();
-        $data['user_id'] = 4; // 注意避免硬编码
 
-        // 查找是否已经有这个产品在购物车中
+        // Look for whether this product is already in the cart
         $existingCart = $this->Carts->find()
             ->where([
-                'user_id' => $data['user_id'],
                 'product_id' => $data['product_id']
             ])
             ->first();
 
-        // 如果已经有这个产品，我们将更新数量
+        // If the product is already there, we will update the quantity
         if ($existingCart) {
             $existingCart->quantity += $data['quantity'];
             $cart = $existingCart;
         } else {
-            // 如果没有，我们将创建一个新的项
+            // If not, we will create a new item
             $cart = $this->Carts->newEmptyEntity();
             $cart = $this->Carts->patchEntity($cart, $data);
         }
@@ -68,7 +71,6 @@ class CartsController extends AppController
         $this->viewBuilder()->setOption('serialize', ['data']);
         $this->RequestHandler->renderAs($this, 'json');
     }
-
 
     public function delete($id = null): ?\Cake\Http\Response
     {
@@ -98,6 +100,5 @@ class CartsController extends AppController
 
         return $this->redirect($this->referer());
     }
-
-
 }
+?>

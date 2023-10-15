@@ -639,7 +639,6 @@ progress {
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-right: auto;
-  margin-left: auto;
 }
 
 @media (min-width: 576px) {
@@ -4228,7 +4227,7 @@ textarea.form-control-lg {
   flex: 1 1 auto;
   padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
   color: var(--bs-card-color);
-  width: 100vh;
+  width: 110vh;
 }
 
 .card-title {

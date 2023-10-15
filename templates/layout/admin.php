@@ -49,6 +49,10 @@ echo $this->Html->script("https://use.fontawesome.com/releases/v6.3.0/js/all.js"
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Tabs</div>
+                            <a class="nav-link" href=<?= $this->Url->buildFromPath('Users::dashboard');?>>
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-table-cells-large"></i></div>
+                                Dashboard
+                            </a>
                             <?= $this->Html->link(
                             '<div class="sb-nav-link-icon"><i class="fa-solid fa-pen-to-square"></i></div>Content Blocks',
                             [

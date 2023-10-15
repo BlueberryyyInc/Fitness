@@ -5,7 +5,7 @@
 <section class="page-section" id="contact">
     <div class="container">
         <div class="text-center">
-            <h2 class="section-heading text-uppercase">Contact Us</h2>
+            <h2 class="section-heading text-uppercase" style="color: black;">Contact Us</h2>
         </div>
         <br>
         <div class="row">
@@ -50,19 +50,19 @@
                 <div class="row align-items-stretch mb-5">
                     <div>
                         <div class="form-group">
-                            <?= $this->Form->control('name', ['class' => 'form-control', 'required' => true]) ?>
+                            <?= $this->Form->control('name', ['class' => 'form-control', 'required' => true, 'maxLength' => 40]) ?>
                         </div>
                         <div class="form-group">
-                            <?= $this->Form->control('email', ['class' => 'form-control', 'required' => true]) ?>
+                            <?= $this->Form->control('email', ['class' => 'form-control', 'required' => true, 'maxLength' => 60]) ?>
                         </div>
                         <div class="form-group mb-md-0">
-                            <?= $this->Form->control('phone', ['class' => 'form-control', 'required' => true]) ?>
+                            <?= $this->Form->control('phone', ['class' => 'form-control', 'type' => 'number', 'required' => true, 'max' => 9999999999, 'pattern' => '[0-9]*']) ?>
                         </div>
                         <div class="form-group">
-                            <?= $this->Form->control('subject', ['class' => 'form-control', 'required' => true]) ?>
+                            <?= $this->Form->control('subject', ['class' => 'form-control', 'required' => true, 'maxLength' => 40]) ?>
                         </div>
                         <div class="form-group">
-                            <?= $this->Form->control('message', ['class' => 'form-control', 'rows' => '4', 'required' => true]) ?>
+                            <?= $this->Form->control('message', ['class' => 'form-control', 'rows' => '4', 'required' => true, 'maxLength' => 401]) ?>
                         </div>
                     </div>
                     <div class="text-center">

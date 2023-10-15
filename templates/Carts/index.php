@@ -6,14 +6,17 @@
     <div class="container">
         <div class="container mt-5">
             <h1>Your Cart</h1>
+            <?php
+
+            ?>
+
             <?php foreach ($carts as $cart): ?>
+                <?= ($cart->product->image_path) ?>
                 <div class="card mt-3">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-3">
-                                <img
-                                    src="http://localhost:8888/team115-app_fit3047-main/assets/img/portfolio/5kgweights.jpg"
-                                    class="img-fluid" alt="Product Image">
+                                <?= $this->Html->image($cart->product->product_image_path, ['alt' => 'Product Image', 'class' => 'img-fluid']) ?>
                             </div>
                             <div class="col-md-9">
                                 <h3 class="card-title"><?php echo $cart['product']['product_name'] ?></h3>

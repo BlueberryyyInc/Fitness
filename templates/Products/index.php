@@ -33,7 +33,7 @@ echo $this->Html->script("/js/datatables-simple-demo.js",['block'=>true]);
                             <th><?=h('Product Description')?></th>
                             <th><?=h('Product Brand')?></th>
                             <th><?=h('Product Category')?></th>
-                            <th><?=h('Product Image Path')?></th>
+                            <th><?=h('Product Image')?></th>
                             <th> <?=h('Actions')?></th>
                         </tr>
                     </thead>
@@ -46,7 +46,7 @@ echo $this->Html->script("/js/datatables-simple-demo.js",['block'=>true]);
                             <th><?=h('Product Description')?></th>
                             <th><?=h('Product Brand')?></th>
                             <th><?=h('Product Category')?></th>
-                            <th><?=h('Product Image Path')?></th>
+                            <th><?=h('Product Image')?></th>
                             <th> <?=h('Actions')?></th>
                         </tr>
                     </tfoot>
@@ -60,7 +60,9 @@ echo $this->Html->script("/js/datatables-simple-demo.js",['block'=>true]);
                             <td><?= h($product->product_description) ?></td>
                             <td><?= h($product->product_brand) ?></td>
                             <td><?= h($product->product_category) ?></td>
-                            <td><?= h($product->product_image_path) ?></td>
+                            <td>
+
+                            <?= $this->Html->image($product->product_image_path, ['alt' => $product->product_name, 'width' => '50']) ?>
                             <td class="actions">
                                 <?= $this->Html->link(
                                     '<i class="fa-regular fa-eye"></i> ' . __('View'),
@@ -82,7 +84,7 @@ echo $this->Html->script("/js/datatables-simple-demo.js",['block'=>true]);
                                     '<i class="fas fa-trash"></i> ' . __('Delete'),
                                     ['action' => 'delete', $product->id],
                                     [
-                                        'confirm' => __('Are you sure you want to delete # {0}?', $product->id),
+                                        'confirm' => __('Are you sure you want to delete Product ID: {0}? The ID is assigned to Product Name: {1}.', $product->id, $product->product_name),
                                         'escape' => false,
                                         'class' => 'btn btn-danger btn-sm',
                                     ]
