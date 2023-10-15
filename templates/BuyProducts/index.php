@@ -23,7 +23,7 @@
                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
                             <img class="img-fluid"
-                                 src=<?= h($product->product_image_path) ?> alt="<?= h($product->product_name) ?>"/>
+                                 src="img/<?= h($product->product_image_path) ?>" alt="<?= h($product->product_name) ?>"/>
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading"><?= h($product->product_name) ?></div>
@@ -63,7 +63,7 @@
                             <div class="modal-body">
                                 <h2 class="text-uppercase"><?= h($product->product_name) ?></h2>
                                 <img class="img-fluid d-block mx-auto"
-                                     src=<?= h($product->product_image_path) ?> alt="..."/>
+                                     src="img/<?= h($product->product_image_path) ?>" alt="..."/>
                                 <p><?= h($product->product_description) ?></p>
                                 <ul class="list-inline">
                                     <li>
