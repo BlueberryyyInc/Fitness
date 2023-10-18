@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "04dc55a5ab47026b1b627103e18c5931",
+    "content-hash": "947c8418651209ae566e7e780acae9ef",
     "packages": [
         {
             "name": "cakephp/authentication",
@@ -76,20 +76,20 @@
         },
         {
             "name": "cakephp/authorization",
-            "version": "2.0.0",
+            "version": "2.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/authorization.git",
-                "reference": "f4269fecbd77ebf56736300cc4bf486711388114"
+                "reference": "b6a05f8b8b39c32e9460c5e61f2c4abeea2f0df3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/authorization/zipball/f4269fecbd77ebf56736300cc4bf486711388114",
-                "reference": "f4269fecbd77ebf56736300cc4bf486711388114",
+                "url": "https://api.github.com/repos/cakephp/authorization/zipball/b6a05f8b8b39c32e9460c5e61f2c4abeea2f0df3",
+                "reference": "b6a05f8b8b39c32e9460c5e61f2c4abeea2f0df3",
                 "shasum": ""
             },
             "require": {
-                "cakephp/cakephp": "^4.0",
+                "cakephp/http": "^4.0",
                 "php": ">=7.2",
                 "psr/http-client": "^1.0",
                 "psr/http-message": "^1.0",
@@ -99,10 +99,13 @@
             "require-dev": {
                 "cakephp/authentication": "^2.0",
                 "cakephp/bake": "^2.0",
-                "cakephp/cakephp-codesniffer": "dev-next",
-                "phpunit/phpunit": "^8.0"
+                "cakephp/cakephp": "^4.0",
+                "cakephp/cakephp-codesniffer": "^4.0",
+                "cakephp/plugin-installer": "^1.3",
+                "phpunit/phpunit": "^8.5 || ^9.3"
             },
             "suggest": {
+                "cakephp/http": "To use \"RequestPolicyInterface\" (Not needed separately if using full CakePHP framework).",
                 "cakephp/orm": "To use \"OrmResolver\" (Not needed separately if using full CakePHP framework)."
             },
             "type": "cakephp-plugin",
@@ -135,7 +138,7 @@
                 "issues": "https://github.com/cakephp/authorization/issues",
                 "source": "https://github.com/cakephp/authorization"
             },
-            "time": "2019-12-16T02:49:49+00:00"
+            "time": "2023-09-04T21:19:41+00:00"
         },
         {
             "name": "cakephp/cakephp",
@@ -251,16 +254,16 @@
         },
         {
             "name": "cakephp/chronos",
-            "version": "2.4.1",
+            "version": "2.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/chronos.git",
-                "reference": "dd583900b26971e84d56c482d6c5fc16961bd103"
+                "reference": "96f28ddfceba2ff56e0d2405c28d789bd546ff55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/chronos/zipball/dd583900b26971e84d56c482d6c5fc16961bd103",
-                "reference": "dd583900b26971e84d56c482d6c5fc16961bd103",
+                "url": "https://api.github.com/repos/cakephp/chronos/zipball/96f28ddfceba2ff56e0d2405c28d789bd546ff55",
+                "reference": "96f28ddfceba2ff56e0d2405c28d789bd546ff55",
                 "shasum": ""
             },
             "require": {
@@ -305,7 +308,7 @@
                 "issues": "https://github.com/cakephp/chronos/issues",
                 "source": "https://github.com/cakephp/chronos"
             },
-            "time": "2023-09-12T03:12:29+00:00"
+            "time": "2023-10-17T08:00:24+00:00"
         },
         {
             "name": "cakephp/migrations",
@@ -6151,5 +6154,5 @@
         "php": ">=7.4"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }
