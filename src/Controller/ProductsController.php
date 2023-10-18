@@ -122,6 +122,12 @@ class ProductsController extends AppController
                     unlink(WWW_ROOT . 'img/' . $product->product_image_path);
                 }
             }
+            elseif(isset($productData['product_image_path'])) {
+                // If the image was not uploaded or there was an error,
+                // remove the product_image_path key from productData to prevent overriding the existing filename.
+                unset($productData['product_image_path']);
+            }
+
 
             $product = $this->Products->patchEntity($product, $productData);
 
