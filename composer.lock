@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "04dc55a5ab47026b1b627103e18c5931",
+    "content-hash": "833bccc989486f79f8ee74d87403535a",
     "packages": [
         {
             "name": "cakephp/authentication",
@@ -1370,16 +1370,16 @@
         },
         {
             "name": "stripe/stripe-php",
-            "version": "v12.6.0",
+            "version": "v13.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stripe/stripe-php.git",
-                "reference": "e0c15e4cbf252e708b937482bb1a50fa7e01bc9d"
+                "reference": "22963c3596eb198e3dd56fbd95d7de9bc4d44f8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/e0c15e4cbf252e708b937482bb1a50fa7e01bc9d",
-                "reference": "e0c15e4cbf252e708b937482bb1a50fa7e01bc9d",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/22963c3596eb198e3dd56fbd95d7de9bc4d44f8f",
+                "reference": "22963c3596eb198e3dd56fbd95d7de9bc4d44f8f",
                 "shasum": ""
             },
             "require": {
@@ -1390,7 +1390,6 @@
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "3.5.0",
-                "php-coveralls/php-coveralls": "^2.5",
                 "phpstan/phpstan": "^1.2",
                 "phpunit/phpunit": "^5.7 || ^9.0"
             },
@@ -1424,9 +1423,9 @@
             ],
             "support": {
                 "issues": "https://github.com/stripe/stripe-php/issues",
-                "source": "https://github.com/stripe/stripe-php/tree/v12.6.0"
+                "source": "https://github.com/stripe/stripe-php/tree/v13.15.0"
             },
-            "time": "2023-10-05T18:01:43+00:00"
+            "time": "2024-03-21T21:05:10+00:00"
         },
         {
             "name": "symfony/config",
